@@ -216,4 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
 .env
+storage/
+*.duckdb
+*.wal
