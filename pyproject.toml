@@ -1,0 +1,13 @@
+[project]
+name = "historico-vendas-medicamentos-controlados"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.43.67",
+    "duckdb>=1.5.5",
+    "pandas>=3.0.5",
+    "python-dotenv>=1.2.2",
+    "tqdm>=4.70.0",
+]
