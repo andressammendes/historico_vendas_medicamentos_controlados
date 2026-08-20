@@ -1,5 +1,5 @@
-CREATE OR REPLACE TABLE pg.industrializados AS 
-SELECT 
+INSERT INTO pg.industrializados
+SELECT
     ano,
     mes,
     uf,
@@ -10,9 +10,7 @@ SELECT
     cid,
     filename
 FROM read_parquet(
-    's3://dir-dados-abertos/bronze/Industrializados/**/*.parquet',
+    '{arquivo}',
     union_by_name = true,
     filename = true
-)
-WHERE filename NOT LIKE '%2026%'
-LIMIT 100;
+);
