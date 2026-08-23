@@ -60,11 +60,11 @@ A partir do bucket, foram disponibilizadas duas formas de acesso para o grupo de
 
 Consulta remota
 
-    Um script Python utilizando boto3 permite consultar os dados diretamente no S3, sem a necessidade de manter uma cópia completa dos arquivos localmente.
+> *Um script Python utilizando boto3 permite consultar os dados diretamente no S3, sem a necessidade de manter uma cópia completa dos arquivos localmente.*
 
 Exploração local
 
-    Para situações em que fosse conveniente trabalhar localmente, também foi desenvolvido um script responsável por realizar a ingestão dos dados do bucket e criar automaticamente um banco DuckDB na máquina do contributor.
+> *Para situações em que fosse conveniente trabalhar localmente, também foi desenvolvido um script responsável por realizar a ingestão dos dados do bucket e criar automaticamente um banco DuckDB na máquina do contributor.*
 
 A arquitetura eliminou a necessidade de distribuir os 82 GB de dados brutos individualmente entre os integrantes do grupo.
 
