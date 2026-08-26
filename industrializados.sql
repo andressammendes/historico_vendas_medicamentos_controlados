@@ -1,4 +1,4 @@
-INSERT INTO pg.industrializados
+INSERT INTO pg.industrializados_temp
 SELECT
     ano,
     mes,
