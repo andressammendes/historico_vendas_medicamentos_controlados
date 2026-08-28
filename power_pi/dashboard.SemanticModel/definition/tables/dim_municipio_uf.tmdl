@@ -1,0 +1,34 @@
+table dim_municipio_uf
+	lineageTag: 4edf4081-c25c-404b-be56-40e9c88697b3
+
+	column nome_municipio
+		dataType: string
+		lineageTag: 1baae536-9c34-493a-b8f5-d9d9badd3ec1
+		summarizeBy: none
+		sourceColumn: nome_municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: b11b48e3-cfe7-4836-a786-204e7a64759e
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_municipio_uf = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("187.127.11.180:5434", "concurso_saude_db"),
+				    public_dim_municipio = Fonte{[Schema="public",Item="dim_municipio"]}[Data],
+				    #"Duplicatas Removidas" = Table.Distinct(public_dim_municipio, {"nome_municipio"}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Duplicatas Removidas",{"id"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
