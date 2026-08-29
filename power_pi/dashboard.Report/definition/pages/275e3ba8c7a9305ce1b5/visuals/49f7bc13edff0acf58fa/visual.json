@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "49f7bc13edff0acf58fa",
+  "position": {
+    "x": 289.84802431610944,
+    "y": 12.644376899696049,
+    "z": 1,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "medidas"
+                    }
+                  },
+                  "Property": "Qnt. Medicamentos Industrializados"
+                }
+              },
+              "queryRef": "medidas.Qnt. Medicamentos Industrializados",
+              "nativeQueryRef": "Qnt. Medicamentos Industrializados"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "medidas"
+                  }
+                },
+                "Property": "Qnt. Medicamentos Industrializados"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas.Qnt. Medicamentos Industrializados"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ff0d08943aa09edf55cb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Qnt. Medicamentos Industrializados"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

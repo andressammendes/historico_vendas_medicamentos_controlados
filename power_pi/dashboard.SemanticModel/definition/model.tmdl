@@ -1,0 +1,26 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["f_manipulados","dim_municipio_uf","dim_principio_ativo","f_industrializados","Consulta1","dim_ano_mes"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table f_manipulados
+ref table dim_municipio_uf
+ref table dim_principio_ativo
+ref table f_industrializados
+ref table dim_ano_mes
+ref table DateTableTemplate_71e085ae-0445-4cfb-b0fc-2de38937576f
+ref table LocalDateTable_8f1db7f2-923c-4f5e-aa9f-f0dfe9fbf7e1
+ref table medidas
+
+ref cultureInfo pt-BR
+
