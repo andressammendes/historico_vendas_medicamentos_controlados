@@ -1,10 +1,18 @@
 import os
+import argparse
 import duckdb
 from dotenv import load_dotenv
 from datetime import datetime
 import boto3
 
 load_dotenv()
+
+parser = argparse.ArgumentParser(
+    description='Carrega arquivos de medicamentos industrializados no PostgreSQL.'
+)
+parser.add_argument('ano_inicio', type=int, help='Primeiro ano do intervalo.')
+parser.add_argument('ano_fim', type=int, help='Último ano do intervalo.')
+args = parser.parse_args()
 
 # Importa o conteúdo das queries
 with open('connections.sql', 'r') as f:
@@ -17,11 +25,14 @@ with open('industrializados.sql', 'r') as f:
 s3_client = boto3.client("s3")
 response = s3_client.list_objects_v2(Bucket='dir-dados-abertos', Prefix='bronze/')
 
+intervalo_anos = [str(ano) for ano in range(args.ano_inicio, args.ano_fim+1)]
 arquivos = []
+
 for obj in response.get("Contents", []):
-    if ('Industrializados' in obj["Key"]) and ('2026' not in obj["Key"]):
-        arquivos.append(obj["Key"])
-# print(arquivos[:4])
+    for ano in intervalo_anos:
+        if (ano in obj["Key"]) and ('Industrializados' in obj["Key"]):
+            arquivos.append(obj["Key"])
+# print(arquivos)
 
 # Preenche a query de conexão com as variáveis de ambiente
 for key, val in os.environ.items():
@@ -49,7 +60,7 @@ for arquivo in arquivos:
             {con_pg_script}
             SELECT EXISTS (
                 SELECT 1 
-                FROM pg.industrializados 
+                FROM pg.industrializados_temp 
                 WHERE filename = '{abs_path}'
             );
         """).fetchone()[0]
@@ -83,4 +94,3 @@ for arquivo in arquivos:
     finally:
         print('Fechando conexão com o duckdb...')
         con.close()
-

@@ -1,4 +1,4 @@
-INSERT INTO pg.industrializados
+INSERT INTO pg.industrializados_temp
 SELECT
     ano,
     mes,
@@ -6,7 +6,8 @@ SELECT
     municipio,
     principio_ativo,
     qt_vendida,
-    conselho_prescritor,
+    NO_CONSELHO_PRESCRITOR AS conselho_prescritor,
+    -- conselho_prescritor,
     cid,
     filename
 FROM read_parquet(
