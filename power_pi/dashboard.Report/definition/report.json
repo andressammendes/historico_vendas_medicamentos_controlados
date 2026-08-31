@@ -37,6 +37,22 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "anvisa-logo-png_seeklogo-94307140283980108892.png",
+          "path": "anvisa-logo-png_seeklogo-94307140283980108892.png",
+          "type": "Image"
+        },
+        {
+          "name": "Logo3928188160745284.png",
+          "path": "Logo3928188160745284.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {
