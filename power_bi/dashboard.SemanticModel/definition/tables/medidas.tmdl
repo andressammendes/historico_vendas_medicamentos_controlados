@@ -1,0 +1,78 @@
+table medidas
+	lineageTag: 9d8a2e01-9746-4955-8edb-3c83fd4d0ee6
+
+	measure 'Princípio Ativos' = ```
+			
+			 var principio_ativo_m = DISTINCTCOUNT(f_manipulados[principio_ativo])
+			 var principio_ativo_i = DISTINCTCOUNT(f_industrializados[principio_ativo])
+			 return
+			 principio_ativo_i+principio_ativo_m
+			```
+		formatString: #,0
+		lineageTag: 64ceef9d-3758-4c5f-aebe-0bd2fb1e2883
+
+	measure 'Total de Receitas' = ```
+			
+			 var total_receitas_m = SUM(f_manipulados[qt_vendida])
+			 var total_receitas_i = SUM(f_industrializados[qt_vendida])
+			 return
+			 total_receitas_i+total_receitas_m
+			```
+		formatString: #,0
+		lineageTag: b7c3b691-f4e1-4cb6-86b6-5dcc18c4dea1
+
+	measure 'CID n nulo' = CALCULATE(SUM(f_industrializados[qt_vendida]),not isblank(f_industrializados[cid]))
+		lineageTag: 7943122f-e75d-44a2-8a79-a0cf0756c9c7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Receitas por Conselho Prescritor' = ```
+			
+			 var qt_vendida_industrializado = SUM(f_industrializados[qt_vendida])
+			 var qt_vendida_manipulado = SUM(f_manipulados[qt_vendida])
+			 return
+			 qt_vendida_industrializado+qt_vendida_manipulado
+			```
+		lineageTag: b2cee5f4-3cdf-4ff4-83de-33f7cf1bead5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Receitas = ```
+			
+			 var receitas_m = SUM(f_manipulados[qt_vendida])
+			 var receitas_i = SUM(f_industrializados[qt_vendida])
+			 return
+			 receitas_i+receitas_m
+			```
+		formatString: 0
+		lineageTag: b90f3c78-28fe-47e3-8b3f-1d168318456b
+
+	measure 'Princípio Ativo' = ```
+			
+			 var ativo_vendido_m = SUM(f_manipulados[qt_ativo_vendido])
+			 var ativo_vendido_i = 0
+			 return
+			 ativo_vendido_i+ativo_vendido_m
+			```
+		lineageTag: fd22531c-48fd-4acc-a3b4-ac5c781f748c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: a1fe69b7-68d4-4d36-bcb9-5960f47c1d3e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 220554aed7e841fab78709b97cf1e1b4
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

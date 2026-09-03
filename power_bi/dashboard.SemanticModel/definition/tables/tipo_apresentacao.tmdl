@@ -1,0 +1,34 @@
+table tipo_apresentacao
+	lineageTag: 9e8b6fe6-0942-400e-a9ba-55b577cd9004
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: b7276181-0f4f-4db8-a19f-bf1003fd40dc
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: 716385a3-8d90-4f0d-9839-7a5f0b56c480
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition tipo_apresentacao = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUfJNzMssKM1JTMkvVorViVYyAop55qWUFpcUZSbmZFZBJGIB", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t, #"Coluna 2" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", Int64.Type}, {"Coluna 2", type text}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"Coluna 1", "id"}, {"Coluna 2", "descricao"}})
+				in
+				    #"Colunas Renomeadas"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

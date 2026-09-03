@@ -1,0 +1,108 @@
+table f_industrializados
+	lineageTag: f76534c1-527a-440b-95f2-ad465d25e050
+
+	column ano_mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a7cf39a1-123d-4ced-81e7-8635f36e9814
+		summarizeBy: none
+		sourceColumn: ano_mes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column uf
+		dataType: string
+		lineageTag: 0bfe2039-7f7f-4c1c-9718-088bfa38805b
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column municipio
+		dataType: string
+		lineageTag: 95092597-dd41-4c7b-9f9d-90bd807d54b8
+		summarizeBy: none
+		sourceColumn: municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column principio_ativo
+		dataType: string
+		lineageTag: 6bf1fb1c-cfab-4906-87a5-e338e8fa5910
+		summarizeBy: none
+		sourceColumn: principio_ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column qt_vendida
+		dataType: double
+		lineageTag: e1a0ab88-0664-4aba-bdfa-af66bf38235c
+		summarizeBy: sum
+		sourceColumn: qt_vendida
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column conselho_prescritor
+		dataType: string
+		lineageTag: 5776c4f3-9843-443b-92d0-f8a1a0c1c159
+		summarizeBy: none
+		sourceColumn: conselho_prescritor
+
+		annotation SummarizationSetBy = Automatic
+
+	column cid
+		dataType: string
+		lineageTag: 7c00eb91-3129-47ab-aeef-811afc6573df
+		summarizeBy: none
+		sourceColumn: cid
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_registros
+		dataType: double
+		lineageTag: e2649d14-06f9-4b0b-b0a5-1c471497dc1e
+		summarizeBy: sum
+		sourceColumn: qtd_registros
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column categoria_cid
+		dataType: string
+		lineageTag: 09b7499c-5131-4bc9-a6f2-b40910ea4be5
+		summarizeBy: none
+		sourceColumn: categoria_cid
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_tipo_industrializados = 2
+		formatString: 0
+		lineageTag: d95d7e5c-76c0-43ae-8ab7-ffe93b6ce776
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition f_industrializados = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("187.127.11.180:5434", "concurso_saude_db"),
+				    public_industrializados = Fonte{[Schema="public",Item="industrializados"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(public_industrializados,{{"ano_mes", type date}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"filename"}),
+				    #"Texto Aparado" = Table.TransformColumns(#"Colunas Removidas",{{"uf", Text.Trim, type text}, {"municipio", Text.Trim, type text}, {"principio_ativo", Text.Trim, type text}, {"conselho_prescritor", Text.Trim, type text}, {"cid", Text.Trim, type text}}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Texto Aparado",{{"uf", Text.Clean, type text}, {"municipio", Text.Clean, type text}, {"principio_ativo", Text.Clean, type text}, {"conselho_prescritor", Text.Clean, type text}, {"cid", Text.Clean, type text}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Texto Limpo", "Personalizar", each if Text.Length([cid])=3 then [cid] else Text.Range([cid],0,3)),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Personalização Adicionada",{{"Personalizar", "categoria_cid"}})
+				in
+				    #"Colunas Renomeadas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
