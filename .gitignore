@@ -222,3 +222,16 @@ __marimo__/
 storage/
 *.duckdb
 *.wal
+
+# Power BI
+*.pbix.bak
+*.pbix.lock
+~$*.pbix
+*.pbix.tmp
+Cache/
+TempSaves/
+*.DataModelCache
+*.pbicache
+[Cc]ache.abf
+LocalCache/
+*.pbit.bak
