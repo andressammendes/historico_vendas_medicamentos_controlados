@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 163,
+        "x": 0,
         "y": 15
       },
       "nodes": [
@@ -123,6 +123,18 @@
             "width": 234
           },
           "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1340,
+            "y": 268
+          },
+          "nodeIndex": "medidas visual",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",

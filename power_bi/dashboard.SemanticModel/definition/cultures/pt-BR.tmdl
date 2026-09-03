@@ -1035,6 +1035,48 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medidas.princípio_ativos_i": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "medidas",
+			          "ConceptualProperty": "Princípio Ativos I"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Princípio Ativos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas.total_de_receitas_i": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "medidas",
+			          "ConceptualProperty": "Total de Receitas I"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Total de Receitas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {

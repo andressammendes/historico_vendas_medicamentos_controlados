@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "454a7bde504f499ee6ce",
+  "name": "a5314c6023050e744e61",
   "position": {
-    "x": 722.66009852216746,
-    "y": 109.95073891625616,
-    "z": 8000,
+    "x": 684.53201970443354,
+    "y": 15.073891625615763,
+    "z": 13000,
     "height": 68.275862068965523,
     "width": 557.73399014778329,
-    "tabOrder": 8000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "slicer",
@@ -37,23 +37,6 @@
         "isDefaultSort": true
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "dim_principio_ativo.nome_principio_ativo"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "data": [
         {
@@ -101,7 +84,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

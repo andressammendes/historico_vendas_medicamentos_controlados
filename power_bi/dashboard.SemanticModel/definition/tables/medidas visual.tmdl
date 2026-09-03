@@ -1,0 +1,69 @@
+table 'medidas visual'
+	lineageTag: 7191437f-8665-4e87-a42b-a1bde041eae5
+
+	measure 'Cor_Dinamica Fundo' =
+			
+			VAR vSelecao = SELECTEDVALUE(tipo_apresentacao[descricao])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        vSelecao = "Manipulados", "#0B353A",
+			        vSelecao = "Industrializados", "#0A1C40",
+			        "#0B353A"
+			    )
+		lineageTag: 9431ff9f-24b0-4982-bb83-edd09f77ddca
+
+	measure Cor_Canvas_Dinamica =
+			
+			VAR vSelecao = SELECTEDVALUE(tipo_apresentacao[descricao])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        vSelecao = "Manipulados", "#F3F8F8",
+			        vSelecao = "Industrializados", "#F3F6FA",
+			        "#F3F8F8"
+			    )
+		lineageTag: 5c455948-640a-4e89-af57-f0b0dba3fe85
+
+	measure Cor_Sidebar_Dinamica =
+			
+			VAR vSelecao = SELECTEDVALUE(tipo_apresentacao[descricao])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        vSelecao = "Manipulados", "#608D93",
+			        vSelecao = "Industrializados", "#7A96C2",
+			        "#608D93"
+			    )
+		lineageTag: b3d5af9f-5c7b-4810-a522-aa12f5b8d62b
+
+	measure Cor_Valor_Card =
+			
+			VAR vSelecao = SELECTEDVALUE(tipo_apresentacao[descricao])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        vSelecao = "Manipulados", "#008075",
+			        vSelecao = "Industrializados", "#005BC4",
+			        "#008075"
+			    )
+		lineageTag: 568319d7-d084-4a07-b3b8-dee3b72c83d5
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 37274f84-981c-4d49-87a4-104a75d6b802
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'medidas visual' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 0c0a63ee143a4776b287b7a30ff5a5ea
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

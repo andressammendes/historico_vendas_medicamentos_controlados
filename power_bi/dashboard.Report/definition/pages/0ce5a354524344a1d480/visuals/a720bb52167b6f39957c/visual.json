@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "454a7bde504f499ee6ce",
+  "name": "a720bb52167b6f39957c",
   "position": {
-    "x": 722.66009852216746,
-    "y": 109.95073891625616,
-    "z": 8000,
-    "height": 68.275862068965523,
-    "width": 557.73399014778329,
-    "tabOrder": 8000
+    "x": 184.43349753694582,
+    "y": 16.847290640394089,
+    "z": 11000,
+    "height": 45.221674876847288,
+    "width": 209.26108374384236,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_principio_ativo"
+                      "Entity": "dim_ano_mes"
                     }
                   },
-                  "Property": "nome_principio_ativo"
+                  "Property": "Ano/Mes"
                 }
               },
-              "queryRef": "dim_principio_ativo.nome_principio_ativo",
-              "nativeQueryRef": "nome_principio_ativo",
+              "queryRef": "dim_ano_mes.Ano/Mes",
+              "nativeQueryRef": "Ano/Mes",
               "active": true
             }
           ]
@@ -37,23 +37,6 @@
         "isDefaultSort": true
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "dim_principio_ativo.nome_principio_ativo"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "data": [
         {
@@ -61,7 +44,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Between'"
                 }
               }
             }
@@ -84,13 +67,6 @@
                   "Value": "1D"
                 }
               }
-            },
-            "selfFilterEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
@@ -101,7 +77,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -115,7 +91,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "15D"
                 }
               }
             },
@@ -123,13 +99,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Princípio Ativo'"
                 }
               }
             }
@@ -174,19 +143,6 @@
             }
           }
         }
-      ],
-      "items": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -205,7 +161,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "nome_principio_ativo",
+      "groupName": "Ano/Mes",
       "fieldChanges": true,
       "filterChanges": true
     },

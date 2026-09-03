@@ -24,6 +24,7 @@ ref table medidas
 ref table dim_cid
 ref table tipo_apresentacao
 ref table conselho_prescritor
+ref table 'medidas visual'
 
 ref cultureInfo pt-BR
 

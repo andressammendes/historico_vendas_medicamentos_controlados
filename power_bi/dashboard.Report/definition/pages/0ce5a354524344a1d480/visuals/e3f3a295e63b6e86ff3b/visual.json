@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "454a7bde504f499ee6ce",
+  "name": "e3f3a295e63b6e86ff3b",
   "position": {
-    "x": 722.66009852216746,
-    "y": 109.95073891625616,
-    "z": 8000,
+    "x": 382.16748768472905,
+    "y": 15.073891625615763,
+    "z": 12000,
     "height": 68.275862068965523,
-    "width": 557.73399014778329,
-    "tabOrder": 8000
+    "width": 305.02463054187194,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,15 +20,30 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_principio_ativo"
+                      "Entity": "dim_municipio_uf"
                     }
                   },
-                  "Property": "nome_principio_ativo"
+                  "Property": "uf"
                 }
               },
-              "queryRef": "dim_principio_ativo.nome_principio_ativo",
-              "nativeQueryRef": "nome_principio_ativo",
+              "queryRef": "dim_municipio_uf.uf",
+              "nativeQueryRef": "uf",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_municipio_uf"
+                    }
+                  },
+                  "Property": "nome_municipio"
+                }
+              },
+              "queryRef": "dim_municipio_uf.nome_municipio",
+              "nativeQueryRef": "nome_municipio",
+              "active": false
             }
           ]
         }
@@ -37,23 +52,6 @@
         "isDefaultSort": true
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "dim_principio_ativo.nome_principio_ativo"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "data": [
         {
@@ -101,7 +99,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -129,7 +127,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Princípio Ativo'"
+                  "Value": "'Estado/ Município'"
                 }
               }
             }
@@ -205,7 +203,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "nome_principio_ativo",
+      "groupName": "uf",
       "fieldChanges": true,
       "filterChanges": true
     },
