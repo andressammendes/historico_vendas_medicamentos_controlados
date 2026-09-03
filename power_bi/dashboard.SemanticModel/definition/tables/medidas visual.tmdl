@@ -49,6 +49,18 @@ table 'medidas visual'
 			    )
 		lineageTag: 568319d7-d084-4a07-b3b8-dee3b72c83d5
 
+	measure Cor_Fundo_Card =
+			
+			VAR vSelecao = SELECTEDVALUE(tipo_apresentacao[descricao])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        vSelecao = "Manipulados", "#FAFCFC",
+			        vSelecao = "Industrializados", "#FAFCFE",
+			        "#FAFCFC"
+			    )
+		lineageTag: 5fc44c23-4ddc-4490-ab1d-72093afe9e67
+
 	column Column
 		isHidden
 		formatString: 0
