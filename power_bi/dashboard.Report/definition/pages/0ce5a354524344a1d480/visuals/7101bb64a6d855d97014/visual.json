@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "7101bb64a6d855d97014",
   "position": {
-    "x": 976.256157635468,
+    "x": 856.551724137931,
     "y": 78.916256157635473,
-    "z": 26000,
-    "height": 249.16256157635468,
-    "width": 289.064039408867,
-    "tabOrder": 24002
+    "z": 19000,
+    "height": 202.16748768472905,
+    "width": 408.76847290640393,
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "donutChart",
@@ -262,7 +262,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#006E7A'"
+                      "Value": "'#007A70'"
                     }
                   }
                 }
@@ -303,7 +303,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2C4D75'"
+                      "Value": "'#3B82A0'"
                     }
                   }
                 }
@@ -344,7 +344,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#708898'"
+                      "Value": "'#7A9E5A'"
                     }
                   }
                 }
@@ -385,7 +385,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B0BEC5'"
+                      "Value": "'#C59D3D'"
                     }
                   }
                 }
@@ -433,7 +433,14 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bottom'"
+                  "Value": "'RightCenter'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -453,7 +460,7 @@
             "labelStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Category, data value, percent of total'"
+                  "Value": "'Category, percent of total'"
                 }
               }
             },

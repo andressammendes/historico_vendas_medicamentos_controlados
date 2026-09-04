@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "933152ac57c2b88c2a95",
+  "name": "b1cc278c0baba8b9ffd9",
   "position": {
-    "x": 5.3201970443349751,
-    "y": 234.08866995073893,
-    "z": 16000,
-    "height": 93.990147783251231,
-    "width": 93.103448275862064,
-    "tabOrder": 16000
+    "x": 26.600985221674875,
+    "y": 320.09852216748772,
+    "z": 30000,
+    "height": 57.635467980295566,
+    "width": 53.201970443349751,
+    "tabOrder": 30000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Icone I.png'"
+                      "Value": "'Icone card I.png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "Icone_I3663104463360023.png"
+                      "ItemName": "Icone_card_I48036249438279754.png"
                     }
                   }
                 },
@@ -45,14 +45,14 @@
             "fit": {
               "expr": {
                 "Literal": {
-                  "Value": "'Normal'"
+                  "Value": "'Fit'"
                 }
               }
             },
             "height": {
               "expr": {
                 "Literal": {
-                  "Value": "75L"
+                  "Value": "100L"
                 }
               }
             }
@@ -81,7 +81,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'fa7355c2ff9767eb6302'"
+                  "Value": "'615580e5310f7ca010ba'"
                 }
               }
             }

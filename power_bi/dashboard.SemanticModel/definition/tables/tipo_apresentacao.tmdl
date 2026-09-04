@@ -28,7 +28,5 @@ table tipo_apresentacao
 				in
 				    #"Colunas Renomeadas"
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

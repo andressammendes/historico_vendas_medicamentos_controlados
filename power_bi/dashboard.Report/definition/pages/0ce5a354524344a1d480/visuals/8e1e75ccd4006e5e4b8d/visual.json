@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "8e1e75ccd4006e5e4b8d",
   "position": {
-    "x": 109.06403940886699,
-    "y": 78.916256157635473,
-    "z": 7000,
+    "x": 0,
+    "y": 0,
+    "z": 0,
     "height": 125.02463054187193,
-    "width": 569.26108374384239,
+    "width": 404.33497536945811,
     "tabOrder": 7000
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'lka9d.jpg'"
+                      "Value": "'Fundo Card M.png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "lka9d872534102079869.jpg"
+                      "ItemName": "Fundo_Card_M43592152107615834.png"
                     }
                   }
                 },
@@ -60,6 +60,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Fill'"
+                }
+              }
+            },
+            "height": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
                 }
               }
             }
@@ -97,5 +104,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "isHidden": true
+  "parentGroupName": "56bb06eb5c50cce87495"
 }

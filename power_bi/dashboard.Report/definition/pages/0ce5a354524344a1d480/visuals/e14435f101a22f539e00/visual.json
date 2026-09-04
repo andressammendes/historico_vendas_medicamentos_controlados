@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "bbd1e3d144f1ab20cb97",
+  "name": "e14435f101a22f539e00",
   "position": {
-    "x": 4.4334975369458132,
-    "y": 234.08866995073893,
-    "z": 6000,
-    "height": 93.103448275862064,
-    "width": 91.330049261083744,
-    "tabOrder": 4000
+    "x": 113.49753694581281,
+    "y": 78.916256157635473,
+    "z": 3000,
+    "height": 123.25123152709359,
+    "width": 399.90147783251234,
+    "tabOrder": 27000
   },
   "visual": {
     "visualType": "shape",
@@ -41,19 +41,10 @@
       "fill": [
         {
           "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "medidas visual"
-                        }
-                      },
-                      "Property": "Cor_Canvas_Dinamica"
-                    }
-                  }
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
                 }
               }
             }
@@ -78,7 +69,20 @@
       ]
     },
     "visualContainerObjects": {
-      "visualLink": [
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {
@@ -88,17 +92,26 @@
                 }
               }
             },
-            "type": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bookmark'"
+                  "Value": "16D"
                 }
               }
             },
-            "bookmark": {
-              "expr": {
-                "Literal": {
-                  "Value": "'805a63803e4261246d1b'"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "medidas visual"
+                        }
+                      },
+                      "Property": "Cor_Canvas_Dinamica"
+                    }
+                  }
                 }
               }
             }

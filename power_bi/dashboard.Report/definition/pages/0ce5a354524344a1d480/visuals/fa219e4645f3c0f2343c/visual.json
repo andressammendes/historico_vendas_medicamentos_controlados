@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "d5291e3cbe1acb06a973",
+  "name": "fa219e4645f3c0f2343c",
   "position": {
-    "x": 536.45320197044339,
-    "y": 78.916256157635473,
-    "z": 18000,
-    "height": 202.16748768472905,
-    "width": 313.00492610837438,
-    "tabOrder": 20000
+    "x": 113.49753694581281,
+    "y": 458.42364532019707,
+    "z": 22000,
+    "height": 246.50246305418719,
+    "width": 399.90147783251234,
+    "tabOrder": 24000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,38 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "f_industrializados"
+                      "Entity": "f_manipulados"
                     }
                   },
-                  "Property": "cid"
+                  "Property": "principio_ativo"
                 }
               },
-              "queryRef": "f_industrializados.cid",
-              "nativeQueryRef": "cid",
+              "queryRef": "f_manipulados.principio_ativo",
+              "nativeQueryRef": "Princípio Ativo",
               "active": true
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_cid"
-                        }
-                      },
-                      "Property": "descricao"
-                    }
-                  },
-                  "Function": 3
-                }
-              },
-              "queryRef": "Min(dim_cid.descricao)",
-              "nativeQueryRef": "Primeiro descricao"
             }
           ]
         },
@@ -64,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "f_industrializados"
+                          "Entity": "f_manipulados"
                         }
                       },
                       "Property": "qt_vendida"
@@ -73,8 +50,8 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(f_industrializados.qt_vendida)",
-              "nativeQueryRef": "Soma de qt_vendida"
+              "queryRef": "Sum(f_manipulados.qt_vendida)",
+              "nativeQueryRef": "Soma de Quantidade Vendida"
             }
           ]
         }
@@ -88,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "f_industrializados"
+                        "Entity": "f_manipulados"
                       }
                     },
                     "Property": "qt_vendida"
@@ -104,20 +81,20 @@
       }
     },
     "objects": {
-      "labels": [
+      "valueAxis": [
         {
           "properties": {
-            "show": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Receitas'"
                 }
               }
             },
-            "labelDisplayUnits": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "false"
                 }
               }
             }
@@ -164,7 +141,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'CID'"
+                  "Value": "'Princípio Ativo'"
                 }
               }
             },
@@ -172,26 +149,40 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "44L"
+                }
+              }
+            },
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
           }
         }
       ],
-      "valueAxis": [
+      "labels": [
         {
           "properties": {
-            "titleText": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Quantidade de Receitas'"
+                  "Value": "true"
                 }
               }
             },
-            "showAxisTitle": {
+            "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "1000D"
                 }
               }
             }
@@ -200,6 +191,19 @@
       ]
     },
     "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Quantidade de Receitas por Princípio Ativo'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "border": [
         {
           "properties": {
@@ -236,13 +240,26 @@
           }
         }
       ],
-      "title": [
+      "spacing": [
         {
           "properties": {
-            "text": {
+            "spaceAbovePlotArea": {
               "expr": {
                 "Literal": {
-                  "Value": "'Receitas por CID'"
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
                 }
               }
             }
@@ -269,40 +286,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "medidas visual"
-                                    }
-                                  },
-                                  "Property": "Cor_Fundo_Card"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "''"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 2
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#DEEFFF'"
-                            }
-                          }
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "medidas visual"
                         }
-                      ]
+                      },
+                      "Property": "Cor_Fundo_Card"
                     }
                   }
                 }
@@ -313,81 +303,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c576a508c6a17acc80ff",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "f_industrializados"
-              }
-            },
-            "Property": "cid"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "f_industrializados",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "f"
-                              }
-                            },
-                            "Property": "cid"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      }
-    ]
   }
 }

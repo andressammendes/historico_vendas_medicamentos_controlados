@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "307ce88a7d9eef6203aa",
   "position": {
-    "x": 2.6600985221674875,
-    "y": 130.34482758620689,
-    "z": 9000,
-    "height": 93.990147783251231,
-    "width": 93.103448275862064,
-    "tabOrder": 15000
+    "x": 26.600985221674875,
+    "y": 224.33497536945814,
+    "z": 4000,
+    "height": 57,
+    "width": 53,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Icone M.png'"
+                      "Value": "'Icone card m.png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "Icone_M09201647045673622.png"
+                      "ItemName": "Icone_card_m17847063822997367.png"
                     }
                   }
                 },
@@ -45,7 +45,7 @@
             "fit": {
               "expr": {
                 "Literal": {
-                  "Value": "'Normal'"
+                  "Value": "'Fit'"
                 }
               }
             },
@@ -81,7 +81,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'493228fb6b2b41fec0f8'"
+                  "Value": "'cb4f43d7cb544e32a0e5'"
                 }
               }
             }

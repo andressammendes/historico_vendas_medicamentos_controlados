@@ -61,6 +61,11 @@
           "type": "Image"
         },
         {
+          "name": "Anvisa9945161539234211.png",
+          "path": "Anvisa9945161539234211.png",
+          "type": "Image"
+        },
+        {
           "name": "Apenas_texto9251856720321637.png",
           "path": "Apenas_texto9251856720321637.png",
           "type": "Image"
@@ -71,18 +76,23 @@
           "type": "Image"
         },
         {
-          "name": "Icone_I3663104463360023.png",
-          "path": "Icone_I3663104463360023.png",
+          "name": "Fundo_Card_I6476722094667742.png",
+          "path": "Fundo_Card_I6476722094667742.png",
           "type": "Image"
         },
         {
-          "name": "Icone_M09201647045673622.png",
-          "path": "Icone_M09201647045673622.png",
+          "name": "Fundo_Card_M43592152107615834.png",
+          "path": "Fundo_Card_M43592152107615834.png",
           "type": "Image"
         },
         {
-          "name": "lka9d872534102079869.jpg",
-          "path": "lka9d872534102079869.jpg",
+          "name": "Icone_card_I48036249438279754.png",
+          "path": "Icone_card_I48036249438279754.png",
+          "type": "Image"
+        },
+        {
+          "name": "Icone_card_m17847063822997367.png",
+          "path": "Icone_card_m17847063822997367.png",
           "type": "Image"
         },
         {
@@ -106,8 +116,13 @@
           "type": "Image"
         },
         {
-          "name": "s2d1Z8133316449383139.jpg",
-          "path": "s2d1Z8133316449383139.jpg",
+          "name": "Texto_Card_I8473745507795294.png",
+          "path": "Texto_Card_I8473745507795294.png",
+          "type": "Image"
+        },
+        {
+          "name": "Texto_Card_M04751622177595993.png",
+          "path": "Texto_Card_M04751622177595993.png",
           "type": "Image"
         }
       ]

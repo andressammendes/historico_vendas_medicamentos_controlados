@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "2c7453b8b650e98e2319",
+  "name": "f8fdc996a84c0168b2d6",
   "position": {
-    "x": 759.01477832512319,
-    "y": 39.014778325123153,
-    "z": 16000,
-    "height": 30.147783251231527,
-    "width": 97.536945812807886,
-    "tabOrder": 18000
+    "x": 0,
+    "y": 127.68472906403942,
+    "z": 25000,
+    "height": 53.201970443349751,
+    "width": 106.4039408866995,
+    "tabOrder": 26000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Princípio Ativo",
+                    "value": "Tipo de Medicamento",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "8pt"
+                      "color": "#ffffff"
                     }
                   }
                 ],

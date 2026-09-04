@@ -4,10 +4,10 @@
   "position": {
     "x": 215.46798029556649,
     "y": 385.71428571428572,
-    "z": 3000,
+    "z": 24000,
     "height": 88,
     "width": 268,
-    "tabOrder": 6000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -88,7 +88,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Industrializados'"
+                                "Value": "'Manipulados'"
                               }
                             }
                           ]

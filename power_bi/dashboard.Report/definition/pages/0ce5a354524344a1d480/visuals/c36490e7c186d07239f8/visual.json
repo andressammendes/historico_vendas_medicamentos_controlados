@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "0c03ed94b3e04101b516",
+  "name": "c36490e7c186d07239f8",
   "position": {
-    "x": 125.02463054187193,
-    "y": 22.167487684729064,
-    "z": 11000,
-    "height": 23.940886699507388,
-    "width": 38.128078817733993,
-    "tabOrder": 13000
+    "x": 14.187192118226605,
+    "y": 0,
+    "z": 1000,
+    "height": 41.674876847290641,
+    "width": 219.90147783251231,
+    "tabOrder": 33001
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'ferramenta-de-simbolo-de-interface-de-calendario.png'"
+                      "Value": "'Texto Card M.png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "ferramenta-de-simbolo-de-inter24044417248141192.png"
+                      "ItemName": "Texto_Card_M04751622177595993.png"
                     }
                   }
                 },
@@ -47,5 +47,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "56bb06eb5c50cce87495"
 }
