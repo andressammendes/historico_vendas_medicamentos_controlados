@@ -23,7 +23,7 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "Princípio Ativos"
+                  "Property": "Princípios Ativos"
                 }
               },
               "queryRef": "medidas.Qnt. Medicamentos Manipulados",
@@ -43,7 +43,7 @@
                     "Entity": "medidas"
                   }
                 },
-                "Property": "Princípio Ativos"
+                "Property": "Princípios Ativos"
               }
             },
             "direction": "Descending"

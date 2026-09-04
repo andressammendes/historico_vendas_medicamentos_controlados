@@ -66,11 +66,6 @@
           "type": "Image"
         },
         {
-          "name": "Apenas_texto9251856720321637.png",
-          "path": "Apenas_texto9251856720321637.png",
-          "type": "Image"
-        },
-        {
           "name": "ferramenta-de-simbolo-de-inter24044417248141192.png",
           "path": "ferramenta-de-simbolo-de-inter24044417248141192.png",
           "type": "Image"
@@ -81,8 +76,8 @@
           "type": "Image"
         },
         {
-          "name": "Fundo_Card_M43592152107615834.png",
-          "path": "Fundo_Card_M43592152107615834.png",
+          "name": "Icone_card_I21527062345796666.png",
+          "path": "Icone_card_I21527062345796666.png",
           "type": "Image"
         },
         {
@@ -93,6 +88,11 @@
         {
           "name": "Icone_card_m17847063822997367.png",
           "path": "Icone_card_m17847063822997367.png",
+          "type": "Image"
+        },
+        {
+          "name": "Icone_card_m2746590638372194.png",
+          "path": "Icone_card_m2746590638372194.png",
           "type": "Image"
         },
         {
@@ -118,11 +118,6 @@
         {
           "name": "Texto_Card_I8473745507795294.png",
           "path": "Texto_Card_I8473745507795294.png",
-          "type": "Image"
-        },
-        {
-          "name": "Texto_Card_M04751622177595993.png",
-          "path": "Texto_Card_M04751622177595993.png",
           "type": "Image"
         }
       ]

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "94d71bd9570a658cc7dc",
+  "position": {
+    "x": 116.36363636363636,
+    "y": 54.54545454545454,
+    "z": 5004,
+    "height": 60.909090909090907,
+    "width": 1098.181818181818,
+    "tabOrder": 5004
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Este projeto consiste em um dashboard interativo focado na análise de venda e distribuição de medicamentos sujeitos a controle especial no Brasil no período de 2017 a 2021. ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#000000"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A solução visa promover a transparência, o controle social e apoiar a gestão pública de saúde na identificação de padrões de consumo e gargalos na distribuição.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#000000"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

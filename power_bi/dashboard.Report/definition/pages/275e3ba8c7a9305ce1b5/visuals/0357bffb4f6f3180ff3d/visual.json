@@ -131,7 +131,7 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "Princípio Ativo"
+                  "Property": "Princípios Ativos m"
                 }
               },
               "queryRef": "medidas.Princípio Ativo",
@@ -303,7 +303,7 @@
                 "Entity": "medidas"
               }
             },
-            "Property": "Princípio Ativo"
+            "Property": "Princípios Ativos m"
           }
         },
         "type": "Advanced",
@@ -328,7 +328,7 @@
                           "Source": "m"
                         }
                       },
-                      "Property": "Princípio Ativo"
+                      "Property": "Princípios Ativos m"
                     }
                   },
                   "Right": {

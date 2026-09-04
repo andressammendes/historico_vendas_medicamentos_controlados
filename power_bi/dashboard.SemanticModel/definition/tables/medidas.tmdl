@@ -1,7 +1,7 @@
 table medidas
 	lineageTag: 9d8a2e01-9746-4955-8edb-3c83fd4d0ee6
 
-	measure 'Princípio Ativos' = ```
+	measure 'Princípios Ativos' = ```
 			
 			 var principio_ativo_m = DISTINCTCOUNT(f_manipulados[principio_ativo])
 			 var principio_ativo_i = DISTINCTCOUNT(f_industrializados[principio_ativo])
@@ -47,7 +47,7 @@ table medidas
 		formatString: 0
 		lineageTag: b90f3c78-28fe-47e3-8b3f-1d168318456b
 
-	measure 'Princípio Ativo' = ```
+	measure 'Princípios Ativos m' = ```
 			
 			 var ativo_vendido_m = SUM(f_manipulados[qt_ativo_vendido])
 			 var ativo_vendido_i = 0
