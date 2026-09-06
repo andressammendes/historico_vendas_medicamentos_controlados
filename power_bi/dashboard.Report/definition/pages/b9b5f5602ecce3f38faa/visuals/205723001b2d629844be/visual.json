@@ -48,7 +48,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Aproximadamente 95% das receitas foram prescritas por profissionais registrados no CRM (Conselho Regional de Medicina).",
+                    "value": "A grande maioria das receitas foi prescrita por profissionais registrados no CRM (Conselho Regional de Medicina): 94,6% foram utilizadas para a compra de medicamentos manipulados e 90,6% para a compra de industrializados.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -59,7 +59,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Foram registrados cerca de 85% mais princípios ativos vendidos na forma industrializada do que na manipulada.",
+                    "value": "Os medicamentos industrializados representam 95,4% do total de vendas, enquanto os manipulados representam 4,6%.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -70,7 +70,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "99,05% das receitas foram usadas para a compra de medicamentos industrializados, enquanto 0,95% foram de manipulados.",
+                    "value": "Há 84,8% mais princípios ativos registrados na forma industrializada do que na forma manipulada.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -81,7 +81,18 @@
               {
                 "textRuns": [
                   {
-                    "value": "Em 2020 houve uma queda geral de venda dos medicamentos.",
+                    "value": "Em 2020, houve uma queda geral nas vendas de medicamentos.",
+                    "textStyle": {
+                      "fontSize": "10.5pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "São Paulo concentra o maior volume de vendas de medicamentos entre os estados analisados.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -110,7 +121,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "O fármaco comprado mais vezes é a Testosterona.",
+                    "value": "O fármaco comprado com maior frequência foi a Testosterona.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -121,7 +132,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "O princípio ativo vendido em maior quantidade é o Cloridrato de Bupropiona.",
+                    "value": "O princípio ativo vendido em maior quantidade foi o Cloridrato de Bupropiona.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -150,7 +161,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "O princípio ativo mais vendido é o Clonazepam.",
+                    "value": "O fármaco comprado com maior frequência foi a Azitromicina Di-Hidratada.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -161,44 +172,24 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
+                    "value": "O princípio ativo mais vendido foi o Clonazepam.",
+                    "textStyle": {
+                      "fontSize": "10.5pt"
+                    }
                   }
-                ]
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
                   {
-                    "value": ""
+                    "value": "O principal CID registrado nas receitas foi o A04, que se refere a “Outras infecções intestinais bacterianas”, de acordo com a Classificação Internacional de Doenças (CID-10).",
+                    "textStyle": {
+                      "fontSize": "10.5pt"
+                    }
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "CID, região"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
+                ],
+                "listType": "bullet"
               }
             ]
           }
