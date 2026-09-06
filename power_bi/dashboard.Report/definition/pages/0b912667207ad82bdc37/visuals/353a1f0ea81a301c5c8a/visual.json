@@ -43,7 +43,7 @@
               },
               "queryRef": "dim_municipio_uf.nome_municipio",
               "nativeQueryRef": "nome_municipio",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -63,42 +63,16 @@
               "dim_municipio_uf.uf"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_municipio_uf"
-                    }
-                  },
-                  "Property": "uf"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
               "dim_municipio_uf.nome_municipio"
             ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'BA'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {

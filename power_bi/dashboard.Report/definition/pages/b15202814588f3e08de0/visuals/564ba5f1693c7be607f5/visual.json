@@ -4,7 +4,7 @@
   "position": {
     "x": 15.454545454545453,
     "y": 498.18181818181813,
-    "z": 21000,
+    "z": 19000,
     "height": 209.99999999999997,
     "width": 413.63636363636363,
     "tabOrder": 20000
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "f_manipulados"
+                      "Entity": "dim_principio_ativo"
                     }
                   },
-                  "Property": "principio_ativo"
+                  "Property": "nome_principio_ativo"
                 }
               },
-              "queryRef": "f_manipulados.principio_ativo",
-              "nativeQueryRef": "Princípio Ativo",
+              "queryRef": "dim_principio_ativo.nome_principio_ativo",
+              "nativeQueryRef": "nome_principio_ativo",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "f_manipulados"
-                        }
-                      },
-                      "Property": "qt_vendida"
+                    "SourceRef": {
+                      "Entity": "medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total de Receitas"
                 }
               },
-              "queryRef": "Sum(f_manipulados.qt_vendida)",
-              "nativeQueryRef": "Soma de Quantidade Vendida"
+              "queryRef": "medidas.Total de Receitas",
+              "nativeQueryRef": "Total de Receitas"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "f_manipulados"
-                      }
-                    },
-                    "Property": "qt_vendida"
+                  "SourceRef": {
+                    "Entity": "medidas"
                   }
                 },
-                "Function": 0
+                "Property": "Total de Receitas"
               }
             },
             "direction": "Descending"

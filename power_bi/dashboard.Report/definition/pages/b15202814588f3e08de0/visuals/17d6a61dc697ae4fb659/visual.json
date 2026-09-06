@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "17d6a61dc697ae4fb659",
   "position": {
-    "x": 693.63636363636363,
-    "y": 271.81818181818181,
-    "z": 23000,
-    "height": 88,
-    "width": 268,
+    "x": 284.44444444444446,
+    "y": 93.614627285513365,
+    "z": 21000,
+    "height": 93.134328358208947,
+    "width": 151.34328358208955,
     "tabOrder": 3000
   },
   "visual": {
@@ -88,7 +88,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Industrializados'"
+                                "Value": "'Manipulados'"
                               }
                             }
                           ]
@@ -97,6 +97,17 @@
                     }
                   }
                 ]
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2e6b36'"
+                    }
+                  }
+                }
               }
             }
           }
@@ -117,7 +128,15 @@
       ],
       "selection": [
         {
-          "properties": {}
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ],
       "items": [
@@ -127,11 +146,38 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#2e6b36'"
                     }
                   }
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "padding": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
                 }
               }
             }
@@ -171,6 +217,40 @@
                       "Value": "'#145C68'"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

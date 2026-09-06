@@ -4,7 +4,7 @@
   "position": {
     "x": 433.63636363636363,
     "y": 497.27272727272725,
-    "z": 20000,
+    "z": 18000,
     "height": 211.81818181818181,
     "width": 413.63636363636363,
     "tabOrder": 19000
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "f_manipulados"
+                      "Entity": "dim_principio_ativo"
                     }
                   },
-                  "Property": "principio_ativo"
+                  "Property": "nome_principio_ativo"
                 }
               },
-              "queryRef": "f_manipulados.Princípio Ativo",
-              "nativeQueryRef": "Princípio Ativo",
+              "queryRef": "dim_principio_ativo.nome_principio_ativo",
+              "nativeQueryRef": "nome_principio_ativo",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "f_manipulados"
-                        }
-                      },
-                      "Property": "qt_ativo_vendido"
+                    "SourceRef": {
+                      "Entity": "medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total de Princípios Ativos"
                 }
               },
-              "queryRef": "Sum(f_manipulados.qt_ativo_vendido)",
-              "nativeQueryRef": "Soma de qt_ativo_vendido"
+              "queryRef": "medidas.Total de Princípios Ativos",
+              "nativeQueryRef": "Total de Princípios Ativos"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "f_manipulados"
-                      }
-                    },
-                    "Property": "qt_ativo_vendido"
+                  "SourceRef": {
+                    "Entity": "medidas"
                   }
                 },
-                "Function": 0
+                "Property": "Total de Princípios Ativos"
               }
             },
             "direction": "Descending"
@@ -182,7 +172,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1000000000D"
+                  "Value": "1000000D"
                 }
               }
             },
@@ -190,6 +180,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0L"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
                 }
               }
             }

@@ -4,7 +4,7 @@
   "position": {
     "x": 435.45454545454544,
     "y": 119.09090909090908,
-    "z": 18000,
+    "z": 16000,
     "height": 176.36363636363635,
     "width": 409.99999999999994,
     "tabOrder": 17000
@@ -42,11 +42,11 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "Receitas por Conselho Prescritor"
+                  "Property": "Total de Receitas"
                 }
               },
-              "queryRef": "medidas.Receitas por Conselho Prescritor",
-              "nativeQueryRef": "Receitas por Conselho Prescritor"
+              "queryRef": "medidas.Total de Receitas",
+              "nativeQueryRef": "Total de Receitas"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "medidas"
                   }
                 },
-                "Property": "Receitas por Conselho Prescritor"
+                "Property": "Total de Receitas"
               }
             },
             "direction": "Descending"
@@ -609,5 +609,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3100db7072688fad56c8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "conselho_prescritor"
+              }
+            },
+            "Property": "conselho_prescritor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7e9da8b0de5c547b86c6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Total de Receitas"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

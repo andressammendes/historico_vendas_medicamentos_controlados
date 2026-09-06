@@ -4,7 +4,7 @@
   "position": {
     "x": 851.81818181818176,
     "y": 495.45454545454544,
-    "z": 17000,
+    "z": 15000,
     "height": 212.72727272727272,
     "width": 415.45454545454544,
     "tabOrder": 16000
@@ -59,22 +59,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "f_industrializados"
-                        }
-                      },
-                      "Property": "qt_vendida"
+                    "SourceRef": {
+                      "Entity": "medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total de Receitas"
                 }
               },
-              "queryRef": "Sum(f_industrializados.qt_vendida)",
-              "nativeQueryRef": "Soma de qt_vendida"
+              "queryRef": "medidas.Total de Receitas",
+              "nativeQueryRef": "Total de Receitas"
             }
           ]
         }
@@ -83,18 +78,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "f_industrializados"
-                      }
-                    },
-                    "Property": "qt_vendida"
+                  "SourceRef": {
+                    "Entity": "medidas"
                   }
                 },
-                "Function": 0
+                "Property": "Total de Receitas"
               }
             },
             "direction": "Descending"
@@ -189,6 +179,13 @@
               }
             },
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -312,6 +309,19 @@
                       ]
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

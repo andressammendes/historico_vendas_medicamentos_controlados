@@ -183,25 +183,31 @@ cultureInfo pt-BR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "f_manipulado.qt_vendida": {
+			    "f_manipulado.qt_vendidareceitas": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "f_manipulados",
-			          "ConceptualProperty": "qt_vendida"
+			          "ConceptualProperty": "qt_vendida(receitas)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "qt vendida": {
+			          "qt_vendida(receitas)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "qt_vendida": {
+			          "qt_vendida(receita)": {
 			            "Type": "Noun",
 			            "State": "Generated",
-			            "Weight": 0.99
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "qt_vendida": {
+			            "State": "Generated",
+			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -475,7 +481,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "f_industrializados",
-			          "ConceptualProperty": "qt_vendida"
+			          "ConceptualProperty": "qt_vendida(unidades)"
 			        }
 			      },
 			      "State": "Generated",
@@ -536,25 +542,31 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_industrializado.qtd_registro": {
+			    "f_industrializado.qtd_registrosreceitas": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "f_industrializados",
-			          "ConceptualProperty": "qtd_registros"
+			          "ConceptualProperty": "qtd_registros(receitas)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "qtd registro": {
+			          "qtd_registros(receitas)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "qtd_registros": {
+			          "qtd_registro(receita)": {
 			            "Type": "Noun",
 			            "State": "Generated",
-			            "Weight": 0.99
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "qtd_registros": {
+			            "State": "Generated",
+			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -1029,6 +1041,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Receitas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1274,43 +1296,11 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.receitas_por_conselho_prescritor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "medidas",
-			          "ConceptualProperty": "Receitas por Conselho Prescritor"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "receitas por conselho prescritor": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.receitas": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "medidas",
-			          "ConceptualProperty": "Receitas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "receitas": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "medida.princípios_ativos_m": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "medidas",
-			          "ConceptualProperty": "Princípios Ativos m"
+			          "ConceptualProperty": "Total de Princípios Ativos"
 			        }
 			      },
 			      "State": "Generated",
@@ -2684,72 +2674,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_manipulado_has_medida_receitas_por_conselho_prescritor": {
-			      "Binding": {
-			        "ConceptualEntity": "f_manipulados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_manipulado": {
-			          "Target": {
-			            "Entity": "f_manipulado"
-			          }
-			        },
-			        "medida.receitas_por_conselho_prescritor": {
-			          "Target": {
-			            "Entity": "medida.receitas_por_conselho_prescritor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_manipulado"
-			            },
-			            "Object": {
-			              "Role": "medida.receitas_por_conselho_prescritor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_manipulados_have_receitas_por_conselho_prescritor"
-			        }
-			      ]
-			    },
-			    "f_industrializado_has_medida_receitas_por_conselho_prescritor": {
-			      "Binding": {
-			        "ConceptualEntity": "f_industrializados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_industrializado": {
-			          "Target": {
-			            "Entity": "f_industrializado"
-			          }
-			        },
-			        "medida.receitas_por_conselho_prescritor": {
-			          "Target": {
-			            "Entity": "medida.receitas_por_conselho_prescritor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_industrializado"
-			            },
-			            "Object": {
-			              "Role": "medida.receitas_por_conselho_prescritor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_industrializados_have_receitas_por_conselho_prescritor"
-			        }
-			      ]
-			    },
 			    "f_industrializado_has_medida_CID_n_nulo": {
 			      "Binding": {
 			        "ConceptualEntity": "f_industrializados"
@@ -3047,7 +2971,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_industrializado_has_qtd_registro": {
+			    "f_industrializado_has_qtd_registrosreceitas": {
 			      "Binding": {
 			        "ConceptualEntity": "f_industrializados"
 			      },
@@ -3058,9 +2982,9 @@ cultureInfo pt-BR
 			            "Entity": "f_industrializado"
 			          }
 			        },
-			        "f_industrializado.qtd_registro": {
+			        "f_industrializado.qtd_registrosreceitas": {
 			          "Target": {
-			            "Entity": "f_industrializado.qtd_registro"
+			            "Entity": "f_industrializado.qtd_registrosreceitas"
 			          }
 			        }
 			      },
@@ -3071,12 +2995,12 @@ cultureInfo pt-BR
 			              "Role": "f_industrializado"
 			            },
 			            "Object": {
-			              "Role": "f_industrializado.qtd_registro"
+			              "Role": "f_industrializado.qtd_registrosreceitas"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_industrializados_have_qtd_registros"
+			          "ID": "f_industrializados_have_qtd_registrosreceitas"
 			        }
 			      ]
 			    },
@@ -3377,7 +3301,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_manipulado_has_qt_vendida": {
+			    "f_manipulado_has_qt_vendidareceitas": {
 			      "Binding": {
 			        "ConceptualEntity": "f_manipulados"
 			      },
@@ -3388,9 +3312,9 @@ cultureInfo pt-BR
 			            "Entity": "f_manipulado"
 			          }
 			        },
-			        "f_manipulado.qt_vendida": {
+			        "f_manipulado.qt_vendidareceitas": {
 			          "Target": {
-			            "Entity": "f_manipulado.qt_vendida"
+			            "Entity": "f_manipulado.qt_vendidareceitas"
 			          }
 			        }
 			      },
@@ -3401,12 +3325,12 @@ cultureInfo pt-BR
 			              "Role": "f_manipulado"
 			            },
 			            "Object": {
-			              "Role": "f_manipulado.qt_vendida"
+			              "Role": "f_manipulado.qt_vendidareceitas"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_manipulados_have_qt_vendidas"
+			          "ID": "f_manipulados_have_qt_vendidareceitas"
 			        }
 			      ]
 			    },

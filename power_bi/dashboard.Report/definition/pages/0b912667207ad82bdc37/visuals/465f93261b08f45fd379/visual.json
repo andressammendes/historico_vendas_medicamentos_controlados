@@ -44,7 +44,7 @@
                           "Entity": "f_industrializados"
                         }
                       },
-                      "Property": "qt_vendida"
+                      "Property": "qt_vendida(unidades)"
                     }
                   },
                   "Function": 0
@@ -68,7 +68,7 @@
                         "Entity": "f_industrializados"
                       }
                     },
-                    "Property": "qt_vendida"
+                    "Property": "qt_vendida(unidades)"
                   }
                 },
                 "Function": 0

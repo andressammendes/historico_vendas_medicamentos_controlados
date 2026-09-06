@@ -44,7 +44,7 @@
                           "Entity": "f_manipulados"
                         }
                       },
-                      "Property": "qt_vendida"
+                      "Property": "qt_vendida(receitas)"
                     }
                   },
                   "Function": 0
@@ -68,7 +68,7 @@
                         "Entity": "f_manipulados"
                       }
                     },
-                    "Property": "qt_vendida"
+                    "Property": "qt_vendida(receitas)"
                   }
                 },
                 "Function": 0

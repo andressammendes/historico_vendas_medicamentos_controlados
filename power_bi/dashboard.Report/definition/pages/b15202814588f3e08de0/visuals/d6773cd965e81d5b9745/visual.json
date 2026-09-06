@@ -4,7 +4,7 @@
   "position": {
     "x": 547.27272727273612,
     "y": 54.454545454551535,
-    "z": 7000,
+    "z": 5000,
     "height": 45.454545454545453,
     "width": 290,
     "tabOrder": 5000
@@ -43,7 +43,7 @@
               },
               "queryRef": "dim_municipio_uf.nome_municipio",
               "nativeQueryRef": "nome_municipio",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -85,7 +85,20 @@
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "null"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {

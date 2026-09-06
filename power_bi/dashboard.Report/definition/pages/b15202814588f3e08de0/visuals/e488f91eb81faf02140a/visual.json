@@ -4,7 +4,7 @@
   "position": {
     "x": 15.454545454545453,
     "y": 300.90909090909088,
-    "z": 19000,
+    "z": 17000,
     "height": 190.90909090909091,
     "width": 829.99999999999989,
     "tabOrder": 18000
@@ -131,12 +131,12 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "Princípios Ativos m"
+                  "Property": "Total de Receitas"
                 }
               },
-              "queryRef": "medidas.Princípio Ativo",
-              "nativeQueryRef": "Princípios Ativos",
-              "displayName": "Princípios Ativos"
+              "queryRef": "medidas.Total de Receitas",
+              "nativeQueryRef": "Receitas",
+              "displayName": "Receitas"
             }
           ]
         },
@@ -150,11 +150,12 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "Receitas"
+                  "Property": "Total de Princípios Ativos"
                 }
               },
-              "queryRef": "medidas.Receitas",
-              "nativeQueryRef": "Receitas"
+              "queryRef": "medidas.Princípios Ativos m",
+              "nativeQueryRef": "Princípios Ativos",
+              "displayName": "Princípios Ativos"
             }
           ]
         }
@@ -255,24 +256,6 @@
           },
           "selector": {
             "metadata": "medidas.Princípio Ativo"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#008075'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "medidas.Receitas"
           }
         }
       ]
@@ -401,7 +384,7 @@
                 "Entity": "medidas"
               }
             },
-            "Property": "Princípios Ativos m"
+            "Property": "Total de Princípios Ativos"
           }
         },
         "type": "Advanced",
@@ -426,7 +409,7 @@
                           "Source": "m"
                         }
                       },
-                      "Property": "Princípios Ativos m"
+                      "Property": "Total de Princípios Ativos"
                     }
                   },
                   "Right": {
@@ -439,6 +422,120 @@
             }
           ]
         }
+      },
+      {
+        "name": "1025ac2816ad1bdfa0f9",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_ano_mes"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Ano/Mes"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bbb9c43005386ea00463",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_ano_mes"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Ano/Mes"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Trimestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "88027e49426161006c54",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_ano_mes"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Ano/Mes"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Mês"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3b6635c3fedb26122bf7",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_ano_mes"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Ano/Mes"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Dia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9f164556976bbf6e2a1c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Total de Receitas"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

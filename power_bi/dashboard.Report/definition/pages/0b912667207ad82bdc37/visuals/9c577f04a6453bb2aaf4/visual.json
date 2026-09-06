@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "9c577f04a6453bb2aaf4",
   "position": {
     "x": 771,
@@ -44,7 +44,7 @@
                           "Entity": "f_industrializados"
                         }
                       },
-                      "Property": "qt_vendida"
+                      "Property": "qt_vendida(unidades)"
                     }
                   },
                   "Function": 0
@@ -68,7 +68,7 @@
                         "Entity": "f_industrializados"
                       }
                     },
-                    "Property": "qt_vendida"
+                    "Property": "qt_vendida(unidades)"
                   }
                 },
                 "Function": 0
