@@ -20,38 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "f_industrializados"
+                      "Entity": "dim_cid"
                     }
                   },
-                  "Property": "cid"
+                  "Property": "cod_cid"
                 }
               },
-              "queryRef": "f_industrializados.cid",
-              "nativeQueryRef": "cid",
+              "queryRef": "dim_cid.cod_cid",
+              "nativeQueryRef": "cod_cid",
               "active": true
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_cid"
-                        }
-                      },
-                      "Property": "descricao"
-                    }
-                  },
-                  "Function": 3
-                }
-              },
-              "queryRef": "Min(dim_cid.descricao)",
-              "nativeQueryRef": "Primeiro descricao"
             }
           ]
         },
@@ -389,6 +366,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -406,26 +384,7 @@
         }
       },
       {
-        "name": "83aecca4d2326e1ba86d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_cid"
-                  }
-                },
-                "Property": "descricao"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "da39b4ee1ef7117e861c",
+        "name": "3754e95b3519845dfb04",
         "field": {
           "Measure": {
             "Expression": {
@@ -437,6 +396,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "1748cc2fa9c3ae610c97",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_cid"
+              }
+            },
+            "Property": "cod_cid"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

@@ -61,6 +61,20 @@ table 'medidas visual'
 			    )
 		lineageTag: 5fc44c23-4ddc-4490-ab1d-72093afe9e67
 
+	measure Titulo_selecionado =
+			
+			VAR vSelecao = SELECTEDVALUE(tipo_apresentacao[descricao])
+			VAR Medicamentos = "Medicamentos "
+			
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        vSelecao = "Manipulados", CONCATENATE(Medicamentos, vSelecao),
+			        vSelecao = "Industrializados", CONCATENATE(Medicamentos, vSelecao),
+			        BLANK()
+			    )
+		lineageTag: 4ce4c172-3f28-4714-8a16-de7561e9a3bd
+
 	column Column
 		isHidden
 		formatString: 0

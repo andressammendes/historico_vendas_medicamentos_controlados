@@ -16,7 +16,7 @@ table medidas
 			 var total_receitas_m = SUM(f_manipulados[qt_vendida(receitas)])
 			 var total_receitas_i = SUM(f_industrializados[qtd_registros(receitas)])
 			 return
-			 total_receitas_i+total_receitas_m
+			 total_receitas_m+total_receitas_i
 			```
 		formatString: #,0
 		lineageTag: b7c3b691-f4e1-4cb6-86b6-5dcc18c4dea1

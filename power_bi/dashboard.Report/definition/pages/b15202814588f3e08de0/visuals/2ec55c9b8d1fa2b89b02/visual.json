@@ -393,5 +393,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "66dae2dd0d3de2a8543c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Princípios Ativos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
