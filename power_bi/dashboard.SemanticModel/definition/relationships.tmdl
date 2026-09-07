@@ -35,11 +35,6 @@ relationship 41f9a0c9-d0ef-ed6d-dbe0-a5f5d09667bc
 	fromColumn: f_industrializados.id_tipo_industrializados
 	toColumn: tipo_apresentacao.id
 
-relationship 835023bf-80d7-08a0-d229-091ccb531b58
-	toCardinality: many
-	fromColumn: dim_cid.cod_cid
-	toColumn: f_industrializados.categoria_cid
-
 relationship c5d91e1d-fa40-3e8d-b1b6-695e66adbaca
 	fromColumn: f_manipulados.categoria_cid
 	toColumn: dim_cid.cod_cid
@@ -51,4 +46,8 @@ relationship 97316226-13fc-6f09-c5f9-31798abe34b9
 relationship 1a48b590-9d2b-9adb-9b5d-5862f93c89b1
 	fromColumn: f_industrializados.conselho_prescritor
 	toColumn: conselho_prescritor.conselho_prescritor
+
+relationship 6b974a31-ce2b-33a0-50e0-059beca17945
+	fromColumn: f_industrializados.categoria_cid
+	toColumn: dim_cid.cod_cid
 

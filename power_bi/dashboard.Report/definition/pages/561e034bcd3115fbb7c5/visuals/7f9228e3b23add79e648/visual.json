@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "7f9228e3b23add79e648",
+  "position": {
+    "x": 777.07317073170725,
+    "y": 80.487804878048777,
+    "z": 2,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "f_manipulados"
+                    }
+                  },
+                  "Property": "categoria_cid"
+                }
+              },
+              "queryRef": "f_manipulados.categoria_cid",
+              "nativeQueryRef": "categoria_cid"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

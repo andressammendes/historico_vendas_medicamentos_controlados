@@ -20,61 +20,36 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "f_industrializados"
+                      "Entity": "dim_cid"
                     }
                   },
-                  "Property": "cid"
+                  "Property": "cod_cid"
                 }
               },
-              "queryRef": "f_industrializados.cid",
-              "nativeQueryRef": "cid",
+              "queryRef": "dim_cid.cod_cid",
+              "nativeQueryRef": "cod_cid",
               "active": true
             }
           ]
         },
         "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_cid"
-                        }
-                      },
-                      "Property": "descricao"
-                    }
-                  },
-                  "Function": 3
-                }
-              },
-              "queryRef": "Min(dim_cid.descricao)",
-              "nativeQueryRef": "Primeiro descricao"
-            }
-          ]
+          "projections": []
         },
         "Y": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "f_industrializados"
-                        }
-                      },
-                      "Property": "qt_vendida(unidades)"
+                    "SourceRef": {
+                      "Entity": "medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total de Receitas"
                 }
               },
-              "queryRef": "Sum(f_industrializados.qt_vendida)",
-              "nativeQueryRef": "Soma de qt_vendida"
+              "queryRef": "medidas.Total de Receitas",
+              "nativeQueryRef": "Total de Receitas"
             }
           ]
         }
@@ -83,18 +58,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "f_industrializados"
-                      }
-                    },
-                    "Property": "qt_vendida(unidades)"
+                  "SourceRef": {
+                    "Entity": "medidas"
                   }
                 },
-                "Function": 0
+                "Property": "Total de Receitas"
               }
             },
             "direction": "Descending"
@@ -289,6 +259,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
