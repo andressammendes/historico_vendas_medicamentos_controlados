@@ -102,9 +102,13 @@ Decisões tomadas perante aos valores ausentes, ou com baixa qualidade (idade, c
 <summary><strong>Inconsistências, dados inválidos e erros de preenchimento</strong></summary>
 
 Algumas dimensões importantes foram eliminadas da análise devido à dados inválidos.
-Temos como o exemplo mais claro dessa questão a coluna de idade, que além de ter mais de um quarto dos registros nulos, fornece idades incompatíveis com a realidade, como demonstrado abaixo:
+Temos como o exemplo mais claro dessa questão a coluna `idade`, que além de ter mais de um quarto dos registros nulos, fornece idades incompatíveis com a realidade (variando de 0 a 999), como demonstrado abaixo:
 
 <img src="images/output.png" width="600">
+
+Outros pontos de incidencia de alto número de valores nulos foi a coluna `ds_dcb` que além de ter 94,6% de valores nulos n'ao estava especificada em nenhum dos dicionários de dados disponibilizados, e a coluna `sexo`, com 25,9% de valores nulos.
+
+Verificado tais ocorrências, o grupo optou por não incluir essas variáveis nas análises.
 
 </details>
 
@@ -123,7 +127,3 @@ flowchart LR
 ```
 </details>
 
-<!--
-## 🚀 Como Executar o Projeto (Replicabilidade)
-> *Esta seção atende ao critério de Replicabilidade e Escalabilidade do Concurso da CGU.*
--->
