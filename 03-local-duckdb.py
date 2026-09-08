@@ -24,7 +24,7 @@ CREATE SCHEMA IF NOT EXISTS bronze;
 """)
 
 con.execute("""
-CREATE OR REPLACE TABLE bronze.clientes AS
+CREATE OR REPLACE TABLE bronze.anvisa_data AS
 SELECT *
 FROM read_parquet(
     's3://dir-dados-abertos/bronze/**/*.parquet',
@@ -32,12 +32,15 @@ FROM read_parquet(
     filename = true
 );
 """)
+# #%%
+# #%%
+# import duckdb
 
-df = con.execute("""
-SELECT *
-FROM bronze.clientes
-LIMIT 5;
-""").df()
+# con = duckdb.connect('storage/warehouse.duckdb')
 
-print(df)
-
+# # Lista schemas, tabelas, tipo (table/view) e até colunas de forma resumida
+# df = con.execute("SHOW ALL TABLES;").df()
+# print(df)
+# # %%
+# con.execute("DESCRIBE bronze.anvisa_data;").df()
+# # %%
