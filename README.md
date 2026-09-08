@@ -28,9 +28,7 @@ Os dados utilizados são oriundos do Portal Brasileiro de Dados Abertos (`dados.
 ---
 
 <details>
-<summary><strong>Pipeline e Arquitetura</strong></summary>
-
-## Pipeline e disponibilização dos dados
+<summary><strong>Pipeline, ingestão e disponibilização </strong></summary>
 
 Os dados foram obtidos a partir da fonte mencionada anteriormente, totalizando 202 arquivos CSV e aproximadamente 80 GB de dados brutos.
 
@@ -50,13 +48,18 @@ flowchart LR
     E --> H["Grupo de Trabalho"]
     F --> H
 ```
-Otimização e armazenamento
 
-Um script Python, disponível neste repositório, foi desenvolvido para realizar a conversão dos arquivos CSV para Parquet.
+</details>
+
+<details>
+<summary><strong>Otimização para o grupo de trabalho</strong></summary>
+
+
+O script `01-raw-csv-to-parquet.py` , disponível neste repositório, foi desenvolvido para realizar a conversão dos arquivos CSV para Parquet.
 
 > *Além de ser um formato orientado a colunas e mais adequado para consultas analíticas, a conversão proporcionou uma redução expressiva no volume armazenado.*
 
-Os arquivos Parquet foram então disponibilizados em um Amazon S3, que passou a funcionar como uma camada centralizada de armazenamento. O processo de upload também realizou o tratamento dos tipos dos dados antes da persistência.
+Os arquivos Parquet foram então disponibilizados em um Amazon S3, que passou a funcionar como uma camada centralizada de armazenamento. O processo de upload também realizou o tratamento dos tipos dos dados antes da persistência, como demonstra o script `02-bronze-s3-storage-parquet-processing.py`.
 A partir do bucket, foram disponibilizadas duas formas de acesso para o grupo de trabalho:
 
 Consulta remota
@@ -69,9 +72,13 @@ Exploração local
 
 A arquitetura eliminou a necessidade de distribuir os 82 GB de dados brutos individualmente entre os integrantes do grupo.
 
-Os scripts responsáveis por essas etapas estão disponíveis no repositório, permitindo que o processo de preparação e disponibilização seja reproduzido sem que cada usuário precise conhecer ou executar manualmente todas as etapas do pipeline.
+Ambos podem ser conferidos em `03-local-duckdb.py`, permitindo que o processo de preparação e disponibilização seja reproduzido sem que cada usuário precise conhecer ou executar manualmente todas as etapas do pipeline.
 
-## Delimitação de escopo e qualidade de Dados
+</details>
+
+<details>
+<summary><strong>Delimitação de escopo e disponibilidade da fonte</strong></summary>
+## 
 
 A fonte apresenta cobertura histórica contínua entre 2014 e 2021. Após esse período, não foram identificados dados disponíveis entre 2022 e 2025, com a disponibilização dos registros sendo retomada somente em 2026.
 
@@ -89,7 +96,23 @@ Os dados disponibilizados em 2026 foram mantidos como referência da disponibili
 <!--
 Decisões tomadas perante aos valores ausentes, ou com baixa qualidade (idade, cid ...)
 -->
-## Armazenamento e plataforma de análise
+</details>
+
+<details>
+<summary><strong>Inconsistências, dados inválidos e erros de preenchimento</strong></summary>
+
+Algumas dimensões importantes foram eliminadas da análise devido à dados inválidos.
+Temos como o exemplo mais claro dessa questão a coluna de idade, que além de ter mais de um quarto dos registros nulos, fornece idades incompatíveis com a realidade, como demonstrado abaixo:
+
+<img src="images/output.png" width="600">
+
+</details>
+
+
+<details>
+<summary><strong>Armazenamento e produto</strong></summary>
+
+Após exploração dos dados, foi decidido o armazenamento em PostgreSql em uma VPS, e dado início ao desenho do produto final, um dashboard em Power BI, para consumir desses mesmos dados, respeitando todos os critérios de boas práticas para tal, desde a modelagem em tabelas fato e dimensão, separadas por contexto (manipulados e industrializados) como uso de formato PBIP para versionamento e manutenção usando TMDL e GIT.
 
 ```mermaid
 flowchart LR
