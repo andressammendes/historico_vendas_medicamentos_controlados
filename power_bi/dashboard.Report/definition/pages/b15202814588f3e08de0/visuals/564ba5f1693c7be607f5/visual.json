@@ -321,5 +321,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e26c18bc592991ecd455",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_principio_ativo"
+              }
+            },
+            "Property": "nome_principio_ativo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "be5cc15f76957416ed91",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Total de Receitas"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

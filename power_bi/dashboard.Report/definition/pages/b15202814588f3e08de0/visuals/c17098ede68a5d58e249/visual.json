@@ -4,7 +4,7 @@
   "position": {
     "x": 851.81818181818176,
     "y": 495.45454545454544,
-    "z": 15000,
+    "z": 22000,
     "height": 212.72727272727272,
     "width": 415.45454545454544,
     "tabOrder": 16000
@@ -311,20 +311,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3754e95b3519845dfb04",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "medidas"
-              }
-            },
-            "Property": "Total de Receitas"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "1748cc2fa9c3ae610c97",
         "field": {
           "Column": {
@@ -395,6 +381,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "83412a3dce8a018090a6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Total de Receitas"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

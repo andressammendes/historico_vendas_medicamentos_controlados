@@ -265,7 +265,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0A67BB'"
+                      "Value": "'#005BC4'"
                     }
                   }
                 }
@@ -282,9 +282,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": -0.25
+                    "Literal": {
+                      "Value": "'#008075'"
                     }
                   }
                 }
@@ -459,120 +458,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "a54a33365aabcc544735",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_ano_mes"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Ano/Mes"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Ano"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5f99f13e8c6256cbd56a",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_ano_mes"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Ano/Mes"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5935af43b5990ec758a2",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_ano_mes"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Ano/Mes"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Mês"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "caab8051d7b450a0c451",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_ano_mes"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Ano/Mes"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Dia"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d3ba5e25d045011d8366",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "medidas"
-              }
-            },
-            "Property": "Total de Receitas"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

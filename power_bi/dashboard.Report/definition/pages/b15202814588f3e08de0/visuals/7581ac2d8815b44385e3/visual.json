@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "7581ac2d8815b44385e3",
   "position": {
-    "x": 435.45454545454544,
-    "y": 119.09090909090908,
+    "x": 435.55555555555554,
+    "y": 119.11111111111111,
     "z": 16000,
-    "height": 176.36363636363635,
-    "width": 409.99999999999994,
+    "height": 174.22222222222223,
+    "width": 409.77777777777777,
     "tabOrder": 17000
   },
   "visual": {
@@ -609,37 +609,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d33dde08ae7379cd9599",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "conselho_prescritor"
-              }
-            },
-            "Property": "conselho_prescritor"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3fe05f6bf89b27b0403c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "medidas"
-              }
-            },
-            "Property": "Total de Receitas"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

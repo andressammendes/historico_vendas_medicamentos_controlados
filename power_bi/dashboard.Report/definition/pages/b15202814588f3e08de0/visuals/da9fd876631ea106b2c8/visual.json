@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "da9fd876631ea106b2c8",
   "position": {
-    "x": 23.403656821378341,
-    "y": 189.02953586497893,
+    "x": 14.187192118226601,
+    "y": 188.86699507389162,
     "z": 28000,
-    "height": 85.513361462728554,
-    "width": 210.63291139240508,
+    "height": 86.009852216748769,
+    "width": 211.0344827586207,
     "tabOrder": 7000
   },
   "visual": {
@@ -430,8 +430,39 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "435bf516557144ad4ec4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Total de Receitas"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -4,7 +4,7 @@
   "position": {
     "x": 433.63636363636363,
     "y": 497.27272727272725,
-    "z": 18000,
+    "z": 19500,
     "height": 211.81818181818181,
     "width": 413.63636363636363,
     "tabOrder": 19000
@@ -318,7 +318,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8bc554f339a4dde0c41d",
+        "name": "87716b0a77933298c4be",
         "field": {
           "Column": {
             "Expression": {
@@ -332,7 +332,7 @@
         "type": "Categorical"
       },
       {
-        "name": "c93e1b35bb08b00cd0a1",
+        "name": "6ee0d9a1dd7083e93000",
         "field": {
           "Measure": {
             "Expression": {

@@ -273,20 +273,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "159dcd920b222dde60cb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_municipio_uf"
-              }
-            },
-            "Property": "uf"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "17a5c954790653e3588d",
         "field": {
           "Column": {

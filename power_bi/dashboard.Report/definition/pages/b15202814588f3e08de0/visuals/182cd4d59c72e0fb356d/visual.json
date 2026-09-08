@@ -748,23 +748,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3003ac103560dcf3cb64",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "medidas visual"
-              }
-            },
-            "Property": "Titulo_selecionado"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

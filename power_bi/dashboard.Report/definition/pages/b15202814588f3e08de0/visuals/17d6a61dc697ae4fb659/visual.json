@@ -313,7 +313,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bee8ee3ede792aff418d",
+        "name": "1f1cdc908c986be6ab21",
         "field": {
           "Column": {
             "Expression": {
@@ -327,5 +327,6 @@
         "type": "Categorical"
       }
     ]
-  }
+  },
+  "isHidden": true
 }
