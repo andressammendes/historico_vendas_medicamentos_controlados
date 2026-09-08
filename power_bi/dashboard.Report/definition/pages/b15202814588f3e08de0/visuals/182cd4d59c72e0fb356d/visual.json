@@ -267,6 +267,20 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas visual.Titulo_selecionado"
+          }
         }
       ],
       "referenceLabelLayout": [

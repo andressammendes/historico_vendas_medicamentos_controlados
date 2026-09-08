@@ -314,5 +314,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8bc554f339a4dde0c41d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_principio_ativo"
+              }
+            },
+            "Property": "nome_principio_ativo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c93e1b35bb08b00cd0a1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Total de Princípios Ativos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
