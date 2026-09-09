@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "7dfefe4ba10b31d09afe",
+  "name": "69edeb8218315005091c",
   "position": {
-    "x": 98,
-    "y": 91,
-    "z": 25000,
-    "height": 28.18181818181818,
-    "width": 109.09090909090908,
-    "tabOrder": 25000
+    "x": 71.695294996265943,
+    "y": 9.55937266616877,
+    "z": 20000,
+    "height": 29.634055265123227,
+    "width": 212.21807318894696,
+    "tabOrder": 22000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,15 +19,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "Industrializados",
+                    "value": "Prescrições Médicas (CRM)",
                     "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "8pt",
-                      "color": "#000000"
+                      "fontFamily": "DIN",
+                      "fontSize": "14pt"
                     }
                   }
-                ],
-                "horizontalTextAlignment": "center"
+                ]
               }
             ]
           }
@@ -50,5 +48,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "2835eec2a48a3629a011"
 }

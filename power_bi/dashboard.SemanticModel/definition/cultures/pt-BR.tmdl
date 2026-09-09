@@ -1280,22 +1280,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.CID_n_nulo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "medidas",
-			          "ConceptualProperty": "CID n nulo"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "CID n nulo": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "medida.princípios_ativos_m": {
 			      "Definition": {
 			        "Binding": {

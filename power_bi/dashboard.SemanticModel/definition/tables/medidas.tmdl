@@ -21,11 +21,6 @@ table medidas
 		formatString: #,0
 		lineageTag: b7c3b691-f4e1-4cb6-86b6-5dcc18c4dea1
 
-	measure 'CID n nulo' = CALCULATE(SUM(f_industrializados[qt_vendida(unidades)]),not isblank(f_industrializados[cid]))
-		lineageTag: 7943122f-e75d-44a2-8a79-a0cf0756c9c7
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Total de Princípios Ativos' = ```
 			
 			 var ativo_vendido_m = SUM(f_manipulados[qt_ativo_vendido])
@@ -36,6 +31,68 @@ table medidas
 		lineageTag: fd22531c-48fd-4acc-a3b4-ac5c781f748c
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Estado Maior Volume' = ```
+			
+			TOPN(
+			    1, 
+			    VALUES('dim_municipio_uf'[uf]), 
+			    [Total de Receitas], 
+			    DESC
+			)
+			```
+		displayFolder: home
+		lineageTag: 9dabe554-2513-4d23-b2d7-048efaa14d33
+
+	measure '% Prescrições CRM industrializados' = ```
+			
+			VAR ReceitasCRM = 
+			    CALCULATE(
+			        SUM(f_industrializados[qtd_registros(receitas)]), 
+			        'conselho_prescritor'[conselho_prescritor] = "CRM"
+			    )
+			VAR TotalReceitas = SUM(f_industrializados[qtd_registros(receitas)])
+			RETURN
+			DIVIDE(ReceitasCRM, TotalReceitas, 0)
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: home
+		lineageTag: 4332a297-9cdb-477a-a95e-bf82c1dc4333
+
+	measure '% Prescrições CRM manipulados' = ```
+			
+			VAR ReceitasCRM = 
+			    CALCULATE(
+			       SUM(f_manipulados[qt_vendida(receitas)]),
+			        'conselho_prescritor'[conselho_prescritor] = "CRM"
+			    )
+			VAR TotalReceitas = SUM(f_manipulados[qt_vendida(receitas)])
+			RETURN
+			DIVIDE(ReceitasCRM, TotalReceitas, 0)
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: home
+		lineageTag: 7ce26455-500b-49e4-bb92-d2361be58d98
+
+	measure '% Share Industrializados' =
+			
+			VAR TotalIndustrializados = SUM(f_industrializados[qtd_registros(receitas)])
+			VAR TotalGeral =  [Total de Receitas]
+			RETURN
+			DIVIDE(TotalIndustrializados, TotalGeral, 0)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: home
+		lineageTag: 5c42607c-7806-4997-af0b-8b77ed5b7c0c
+
+	measure '% Dif Princípios Ativos Industrializados' =
+			
+			VAR QtdIndustrializados = DISTINCTCOUNT(f_industrializados[principio_ativo])
+			VAR QtdManipulados = DISTINCTCOUNT(f_manipulados[principio_ativo])
+			RETURN
+			DIVIDE(QtdIndustrializados - QtdManipulados, QtdManipulados, 0)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: home
+		lineageTag: c09505d0-b662-451a-8eda-62b2cd34de42
 
 	column Column
 		isHidden

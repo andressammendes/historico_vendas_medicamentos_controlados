@@ -381,20 +381,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "83412a3dce8a018090a6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "medidas"
-              }
-            },
-            "Property": "Total de Receitas"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

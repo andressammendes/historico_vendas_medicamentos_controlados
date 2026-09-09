@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "205723001b2d629844be",
   "position": {
-    "x": 116.36363636363636,
-    "y": 218.18181818181816,
+    "x": 38.715459297983557,
+    "y": 163.46527259148618,
     "z": 6000,
-    "height": 459.09090909090907,
-    "width": 959.99999999999989,
+    "height": 77.430918595967142,
+    "width": 1202.5690814040329,
     "tabOrder": 6000
   },
   "visual": {
@@ -19,13 +19,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "O que os dados revelaram:",
+                    "value": "Este projeto consiste em um dashboard interativo focado na análise de venda e distribuição de medicamentos sujeitos a controle especial no Brasil no período de 2017 a 2021. ",
                     "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "14pt"
+                      "fontSize": "11pt",
+                      "color": "#000000"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -37,159 +38,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "Insights gerais:",
+                    "value": "A solução visa promover a transparência, o controle social e apoiar a gestão pública de saúde na identificação de padrões de consumo e gargalos na distribuição de medicamentos.",
                     "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "12pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "A grande maioria das receitas foi prescrita por profissionais registrados no CRM (Conselho Regional de Medicina): 94,6% foram utilizadas para a compra de medicamentos manipulados e 90,6% para a compra de industrializados.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontSize": "11pt",
+                      "color": "#000000"
                     }
                   }
                 ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Os medicamentos industrializados representam 95,4% do total de vendas, enquanto os manipulados representam 4,6%.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Há 84,8% mais princípios ativos registrados na forma industrializada do que na forma manipulada.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Em 2020, houve uma queda geral nas vendas de medicamentos.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "São Paulo concentra o maior volume de vendas de medicamentos entre os estados analisados.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Medicamentos manipulados:",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "12pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "O fármaco comprado com maior frequência foi a Testosterona.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "O princípio ativo vendido em maior quantidade foi o Cloridrato de Bupropiona.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Medicamentos industrializados:",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "12pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "O fármaco comprado com maior frequência foi a Azitromicina Di-Hidratada.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "O princípio ativo mais vendido foi o Clonazepam.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "O principal CID registrado nas receitas foi o A04, que se refere a “Outras infecções intestinais bacterianas”, de acordo com a Classificação Internacional de Doenças (CID-10).",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
+                "horizontalTextAlignment": "center"
               }
             ]
           }
@@ -200,10 +56,96 @@
       "background": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
                   "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "spaceAboveDivider": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "spaceAboveSubtitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

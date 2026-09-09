@@ -303,7 +303,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3B82A0'"
+                      "Value": "'#005BC4'"
                     }
                   }
                 }
@@ -384,8 +384,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#C59D3D'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0.4
                     }
                   }
                 }

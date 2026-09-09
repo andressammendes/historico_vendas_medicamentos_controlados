@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "94d71bd9570a658cc7dc",
   "position": {
-    "x": 116.36363636363636,
-    "y": 54.54545454545454,
-    "z": 9000,
-    "height": 60.909090909090907,
-    "width": 1098.181818181818,
-    "tabOrder": 9000
+    "x": 116.71732522796353,
+    "y": 49.6048632218845,
+    "z": 7000,
+    "height": 61.276595744680854,
+    "width": 1135.0759878419453,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Este projeto consiste em um dashboard interativo focado na análise de venda e distribuição de medicamentos sujeitos a controle especial no Brasil no período de 2017 a 2021. ",
+                    "value": "Panorama do Mercado Farmacêutico Brasileiro",
                     "textStyle": {
-                      "fontSize": "10.5pt",
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "14pt",
                       "color": "#000000"
                     }
                   }
@@ -31,9 +32,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "A solução visa promover a transparência, o controle social e apoiar a gestão pública de saúde na identificação de padrões de consumo e gargalos na distribuição.",
+                    "value": "Análise de prescrições, volumes de venda e perfil epidemiológico no mercado de medicamentos controlados (industrializados e manipulados).",
                     "textStyle": {
-                      "fontSize": "10.5pt",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "12pt",
                       "color": "#000000"
                     }
                   }

@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "7dfefe4ba10b31d09afe",
+  "name": "c8dd63b3043569992791",
   "position": {
-    "x": 98,
-    "y": 91,
-    "z": 25000,
-    "height": 28.18181818181818,
-    "width": 109.09090909090908,
-    "tabOrder": 25000
+    "x": 120,
+    "y": 13,
+    "z": 13000,
+    "height": 35,
+    "width": 143
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +18,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Industrializados",
+                    "value": "Veja as Análises",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "8pt",
+                      "fontSize": "12pt",
                       "color": "#000000"
                     }
                   }
@@ -50,5 +49,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "25cbb4692c403d4a8336"
 }

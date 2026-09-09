@@ -478,7 +478,7 @@
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "-14.19898306338645D"
+                  "Value": "-14.198983063386507D"
                 }
               }
             },
@@ -558,6 +558,35 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "medidas visual"
+                        }
+                      },
+                      "Property": "Cor_Valor_Card"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ],
@@ -724,51 +753,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "10cb9b450044486049a1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_municipio_uf"
-              }
-            },
-            "Property": "nome_estado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7de7da51b48244d02e90",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_municipio_uf"
-              }
-            },
-            "Property": "nome_municipio"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "55c97de61553d1c8bdd3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "medidas"
-              }
-            },
-            "Property": "Total de Receitas"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

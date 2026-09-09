@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "564ba5f1693c7be607f5",
+  "name": "6d91470e2910a30d3c70",
   "position": {
-    "x": 15.454545454545453,
-    "y": 498.18181818181813,
-    "z": 19000,
-    "height": 209.99999999999997,
-    "width": 413.63636363636363,
-    "tabOrder": 20000
+    "x": 325.33731640527759,
+    "y": 262.88274831964151,
+    "z": 11000,
+    "height": 114.71247199402539,
+    "width": 265.75056011949215,
+    "tabOrder": 11000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_principio_ativo"
-                    }
-                  },
-                  "Property": "nome_principio_ativo"
-                }
-              },
-              "queryRef": "dim_principio_ativo.nome_principio_ativo",
-              "nativeQueryRef": "nome_principio_ativo",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Data": {
           "projections": [
             {
               "field": {
@@ -42,11 +23,11 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "Total de Receitas"
+                  "Property": "% Dif Princípios Ativos Industrializados"
                 }
               },
-              "queryRef": "medidas.Total de Receitas",
-              "nativeQueryRef": "Total de Receitas"
+              "queryRef": "medidas.% Dif Princípios Ativos",
+              "nativeQueryRef": "% Dif Princípios Ativos Industrializados"
             }
           ]
         }
@@ -61,7 +42,7 @@
                     "Entity": "medidas"
                   }
                 },
-                "Property": "Total de Receitas"
+                "Property": "% Dif Princípios Ativos Industrializados"
               }
             },
             "direction": "Descending"
@@ -71,115 +52,84 @@
       }
     },
     "objects": {
-      "valueAxis": [
+      "label": [
         {
           "properties": {
-            "titleText": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Receitas'"
+                  "Value": "'mais princípios ativos registrados'"
                 }
               }
             },
-            "showAxisTitle": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dataPoint": [
-        {
-          "properties": {}
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "medidas visual"
-                        }
-                      },
-                      "Property": "Cor_Valor_Card"
-                    }
-                  }
+                  "Value": "10D"
                 }
               }
             }
           },
           "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
+            "metadata": "medidas.% Dif Princípios Ativos"
           }
         }
       ],
-      "categoryAxis": [
+      "value": [
         {
           "properties": {
-            "titleText": {
+            "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'Princípio Ativo'"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "44L"
-                }
-              }
-            },
-            "preferredCategoryWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
+                  "Value": "'center'"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "medidas.% Dif Princípios Ativos"
           }
         }
       ],
-      "labels": [
+      "outline": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
-            },
-            "labelDisplayUnits": {
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "1000D"
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -191,13 +141,6 @@
       "title": [
         {
           "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Receitas por Princípio Ativo'"
-                }
-              }
-            },
             "titleWrap": {
               "expr": {
                 "Literal": {
@@ -209,6 +152,103 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Variedade Fármacos Indústria'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "spaceAboveDivider": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "spaceAboveSubtitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "medidas visual"
+                        }
+                      },
+                      "Property": "Cor_Fundo_Card"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
                 }
               }
             }
@@ -247,37 +287,11 @@
                   "Value": "16D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "spaceAbovePlotArea": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
-                }
-              }
             },
-            "bottom": {
+            "width": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             }
@@ -291,28 +305,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "medidas visual"
-                        }
-                      },
-                      "Property": "Cor_Fundo_Card"
-                    }
-                  }
                 }
               }
             }
