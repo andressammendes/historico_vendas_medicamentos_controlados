@@ -27,3 +27,27 @@ relationship 6bea0e6e-2a5c-1f89-5964-b19250d21824
 	fromColumn: f_manipulados.municipio
 	toColumn: dim_municipio_uf.nome_municipio
 
+relationship c1984ae8-c483-48b7-ffa8-5bcc128bb39f
+	fromColumn: f_manipulados.id_tipo_manipulados
+	toColumn: tipo_apresentacao.id
+
+relationship 41f9a0c9-d0ef-ed6d-dbe0-a5f5d09667bc
+	fromColumn: f_industrializados.id_tipo_industrializados
+	toColumn: tipo_apresentacao.id
+
+relationship c5d91e1d-fa40-3e8d-b1b6-695e66adbaca
+	fromColumn: f_manipulados.categoria_cid
+	toColumn: dim_cid.cod_cid
+
+relationship 97316226-13fc-6f09-c5f9-31798abe34b9
+	fromColumn: f_manipulados.conselho_prescritor
+	toColumn: conselho_prescritor.conselho_prescritor
+
+relationship 1a48b590-9d2b-9adb-9b5d-5862f93c89b1
+	fromColumn: f_industrializados.conselho_prescritor
+	toColumn: conselho_prescritor.conselho_prescritor
+
+relationship 6b974a31-ce2b-33a0-50e0-059beca17945
+	fromColumn: f_industrializados.categoria_cid
+	toColumn: dim_cid.cod_cid
+

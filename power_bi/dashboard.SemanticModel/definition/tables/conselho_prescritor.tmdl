@@ -1,0 +1,27 @@
+table conselho_prescritor
+	lineageTag: 0a6afc77-2eaf-45c7-8375-a0f6634ee0ab
+
+	column conselho_prescritor
+		lineageTag: 01454c11-98ac-4b91-b971-2b3ccca0a33c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [conselho_prescritor]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition conselho_prescritor = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "conselho_prescritor", string,
+				    {
+				        { "CRM"},
+				        { "CRMV"},
+				        { "CRO"},
+					{ "RMS"}
+				    }
+				)
+
+	annotation PBI_Id = 19fe73752ce74cb685a8415c7ff72dc6
+

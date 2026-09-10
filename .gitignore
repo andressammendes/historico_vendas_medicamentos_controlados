@@ -218,20 +218,5 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-.env
-storage/
-*.duckdb
-*.wal
-
-# Power BI
-*.pbix.bak
-*.pbix.lock
-~$*.pbix
-*.pbix.tmp
-Cache/
-TempSaves/
-*.DataModelCache
-*.pbicache
-[Cc]ache.abf
-LocalCache/
-*.pbit.bak
+*.abf
+**/cache.abf

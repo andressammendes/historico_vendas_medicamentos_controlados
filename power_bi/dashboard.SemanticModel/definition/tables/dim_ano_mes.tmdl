@@ -3,7 +3,7 @@ table dim_ano_mes
 
 	column Ano/Mes
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yy
 		lineageTag: 4d00cc99-1b08-47df-96c3-b5a731d1c91b
 		summarizeBy: none
 		sourceColumn: Ano/Mes
@@ -16,6 +16,8 @@ table dim_ano_mes
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	partition dim_ano_mes = m
 		mode: import
@@ -31,9 +33,11 @@ table dim_ano_mes
 				    #"Colunas Mescladas" = Table.CombineColumns(Table.TransformColumnTypes(#"Colunas Reordenadas", {{"Ano", type text}, {"Mês", type text}}, "pt-BR"),{"Ano", "Mês"},Combiner.CombineTextByDelimiter("/", QuoteStyle.None),"Ano/Mes"),
 				    #"Colunas Removidas" = Table.RemoveColumns(#"Colunas Mescladas",{"Data"}),
 				    #"Duplicatas Removidas" = Table.Distinct(#"Colunas Removidas"),
-				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Duplicatas Removidas",{{"Ano/Mes", type date}})
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Duplicatas Removidas",{{"Ano/Mes", type date}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each [#"Ano/Mes"] >= #date(2017, 1, 1)),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Linhas Filtradas", each ([#"Ano/Mes"] <> #date(2021, 10, 1) and [#"Ano/Mes"] <> #date(2021, 11, 1) and [#"Ano/Mes"] <> #date(2021, 12, 1)))
 				in
-				    #"Tipo Alterado1"
+				    #"Linhas Filtradas1"
 
 	annotation PBI_NavigationStepName = Navegação
 

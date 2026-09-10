@@ -36,11 +36,11 @@ table f_industrializados
 
 		annotation SummarizationSetBy = Automatic
 
-	column qt_vendida
+	column qt_vendida(unidades)
 		dataType: double
 		lineageTag: e1a0ab88-0664-4aba-bdfa-af66bf38235c
 		summarizeBy: sum
-		sourceColumn: qt_vendida
+		sourceColumn: qt_vendida(unidades)
 
 		annotation SummarizationSetBy = Automatic
 
@@ -62,6 +62,31 @@ table f_industrializados
 
 		annotation SummarizationSetBy = Automatic
 
+	column qtd_registros(receitas)
+		dataType: double
+		lineageTag: e2649d14-06f9-4b0b-b0a5-1c471497dc1e
+		summarizeBy: sum
+		sourceColumn: qtd_registros(receitas)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column categoria_cid
+		dataType: string
+		lineageTag: 09b7499c-5131-4bc9-a6f2-b40910ea4be5
+		summarizeBy: none
+		sourceColumn: categoria_cid
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_tipo_industrializados = 2
+		formatString: 0
+		lineageTag: d95d7e5c-76c0-43ae-8ab7-ffe93b6ce776
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition f_industrializados = m
 		mode: import
 		source =
@@ -69,9 +94,13 @@ table f_industrializados
 				    Fonte = PostgreSQL.Database("187.127.11.180:5434", "concurso_saude_db"),
 				    public_industrializados = Fonte{[Schema="public",Item="industrializados"]}[Data],
 				    #"Tipo Alterado" = Table.TransformColumnTypes(public_industrializados,{{"ano_mes", type date}}),
-				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"filename"})
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"filename"}),
+				    #"Texto Aparado" = Table.TransformColumns(#"Colunas Removidas",{{"uf", Text.Trim, type text}, {"municipio", Text.Trim, type text}, {"principio_ativo", Text.Trim, type text}, {"conselho_prescritor", Text.Trim, type text}, {"cid", Text.Trim, type text}}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Texto Aparado",{{"uf", Text.Clean, type text}, {"municipio", Text.Clean, type text}, {"principio_ativo", Text.Clean, type text}, {"conselho_prescritor", Text.Clean, type text}, {"cid", Text.Clean, type text}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Texto Limpo", "Personalizar", each if Text.Length([cid])=3 then [cid] else Text.Range([cid],0,3)),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Personalização Adicionada",{{"Personalizar", "categoria_cid"}, {"qtd_registros", "qtd_registros(receitas)"}, {"qt_vendida", "qt_vendida(unidades)"}})
 				in
-				    #"Colunas Removidas"
+				    #"Colunas Renomeadas"
 
 	annotation PBI_NavigationStepName = Navegação
 

@@ -24,6 +24,19 @@
           }
         }
       }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "resourcePackages": [
@@ -37,6 +50,57 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Anvisa9945161539234211.png",
+          "path": "Anvisa9945161539234211.png",
+          "type": "Image"
+        },
+        {
+          "name": "Captura_de_tela_2026-09-09_1821911099252995535.png",
+          "path": "Captura_de_tela_2026-09-09_1821911099252995535.png",
+          "type": "Image"
+        },
+        {
+          "name": "ferramenta-de-simbolo-de-inter24044417248141192.png",
+          "path": "ferramenta-de-simbolo-de-inter24044417248141192.png",
+          "type": "Image"
+        },
+        {
+          "name": "Home720676689539676.png",
+          "path": "Home720676689539676.png",
+          "type": "Image"
+        },
+        {
+          "name": "Icone_card_I48036249438279754.png",
+          "path": "Icone_card_I48036249438279754.png",
+          "type": "Image"
+        },
+        {
+          "name": "Icone_card_m17847063822997367.png",
+          "path": "Icone_card_m17847063822997367.png",
+          "type": "Image"
+        },
+        {
+          "name": "Logo_sem_texto5594755819108648.png",
+          "path": "Logo_sem_texto5594755819108648.png",
+          "type": "Image"
+        },
+        {
+          "name": "pin6587856902176737.png",
+          "path": "pin6587856902176737.png",
+          "type": "Image"
+        },
+        {
+          "name": "remedio030972860733466834.png",
+          "path": "remedio030972860733466834.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {
@@ -45,6 +109,9 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
-    "useDefaultAggregateDisplayName": true
+    "useDefaultAggregateDisplayName": true,
+    "queryLimitOption": "None",
+    "customMemoryLimit": "1048576",
+    "customTimeoutLimit": "225"
   }
 }
