@@ -172,7 +172,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1000000D"
+                  "Value": "0D"
                 }
               }
             },
@@ -187,6 +187,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'OutsideEnd'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

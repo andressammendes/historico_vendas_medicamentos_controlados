@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "558c53a1189aa35f4da7",
+  "name": "715cfc10e71a8976b425",
   "position": {
-    "x": 1213.0049261083743,
-    "y": 1.7733990147783252,
-    "z": 14000,
-    "height": 52.72727272727272,
-    "width": 51.818181818181813,
-    "tabOrder": 15000
+    "x": 602.84527338515682,
+    "y": 0,
+    "z": 30001,
+    "height": 41.674876847290641,
+    "width": 41.674876847290641,
+    "tabOrder": 33002
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Anvisa.png'"
+                      "Value": "'Home.png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "Anvisa9945161539234211.png"
+                      "ItemName": "Home720676689539676.png"
                     }
                   }
                 },
@@ -39,6 +39,35 @@
                       "Value": "'Normal'"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualLink": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PageNavigation'"
+                }
+              }
+            },
+            "navigationSection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'b9b5f5602ecce3f38faa'"
                 }
               }
             }
