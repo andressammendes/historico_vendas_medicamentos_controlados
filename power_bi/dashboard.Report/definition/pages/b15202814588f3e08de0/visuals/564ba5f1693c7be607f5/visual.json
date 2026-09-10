@@ -182,6 +182,13 @@
                   "Value": "1000D"
                 }
               }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
+                }
+              }
             }
           }
         }
@@ -321,5 +328,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "17aca669c2309290556b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_principio_ativo"
+              }
+            },
+            "Property": "nome_principio_ativo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0f473970461852e92499",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "Total de Receitas"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
