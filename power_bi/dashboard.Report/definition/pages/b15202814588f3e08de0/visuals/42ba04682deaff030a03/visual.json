@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "42ba04682deaff030a03",
   "position": {
-    "x": 309.9090909090998,
-    "y": 57.181818181824255,
+    "x": 310.34482758620692,
+    "y": 55.862068965517238,
     "z": 4000,
     "height": 45.221674876847288,
-    "width": 209.26108374384236,
+    "width": 219.90147783251231,
     "tabOrder": 4000
   },
   "visual": {
@@ -178,5 +178,23 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a8631fe665203069216a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_ano_mes"
+              }
+            },
+            "Property": "Ano/Mes"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

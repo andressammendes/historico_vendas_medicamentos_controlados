@@ -4,7 +4,7 @@
   "position": {
     "x": 975.05601194921587,
     "y": 262.88274831964151,
-    "z": 9000,
+    "z": 12500,
     "height": 114.71247199402539,
     "width": 265.75056011949215,
     "tabOrder": 9000
@@ -261,22 +261,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "medidas visual"
-                        }
-                      },
-                      "Property": "Cor_Fundo_Card"
-                    }
-                  }
                 }
               }
             },

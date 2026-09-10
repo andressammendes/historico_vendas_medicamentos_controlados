@@ -995,16 +995,6 @@ cultureInfo pt-BR
 			          "princípios ativos": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Princípio Ativos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -2014,19 +2004,7 @@ cultureInfo pt-BR
 			          "ConceptualProperty": "Princípio Ativos I"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Princípio Ativos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "medidas.total_de_receitas_i": {
 			      "Definition": {
@@ -2035,19 +2013,7 @@ cultureInfo pt-BR
 			          "ConceptualProperty": "Total de Receitas I"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Total de Receitas": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    }
 			  },
 			  "Relationships": {

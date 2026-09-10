@@ -3,11 +3,11 @@
   "name": "75002c5e77a790b0400c",
   "position": {
     "x": 0,
-    "y": 0,
+    "y": 1.3469472725544198,
     "z": 19000,
-    "height": 133.83121732636295,
-    "width": 348.91710231516055,
-    "tabOrder": 21000
+    "height": 116.1576354679803,
+    "width": 349.35960591133005,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "shape",
@@ -52,13 +52,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "medidas visual"
-                        }
-                      },
-                      "Property": "Cor_Fundo_Card"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -74,7 +70,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -100,7 +96,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -115,7 +111,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -128,7 +124,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -152,6 +148,19 @@
                       "Property": "Cor_Canvas_Dinamica"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

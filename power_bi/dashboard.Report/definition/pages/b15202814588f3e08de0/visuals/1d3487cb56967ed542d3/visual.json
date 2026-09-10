@@ -6,7 +6,7 @@
     "y": 167.58620689655172,
     "z": 27000,
     "height": 133.00492610837438,
-    "width": 418.52216748768473,
+    "width": 427.38916256157637,
     "tabOrder": 29000
   },
   "visual": {
@@ -104,6 +104,20 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "shadowPositionPreset": {
+              "expr": {
+                "Literal": {
+                  "Value": "'bottomRight'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
