@@ -1,16 +1,23 @@
-# Projeto de Dados - Histórico de venda de medicamentos controlados (Concurso de Dados Abertos)
+# Painel de Medicamentos Controlados (Concurso de Dados Abertos)
 
-A ideia para o projeto surgiu com o lançamento do 2º Concurso de Reúso de Dados Abertos promovido pela Controladoria-Geral da União (CGU).
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/31b1a353-d3d4-41e1-b4a5-03ca71ab6ae2" alt="Demonstração do Dashboard" width="800">
+</p>
+
+🔗 **Acesse a versão interativa completa:** [Painel de Medicamentos Controlados (Power BI)](https://app.powerbi.com/view?r=eyJrIjoiMjQ2YjM2ZWQtMDA2MS00NTFlLThmNTQtZWQ2NjAyNDExYjgwIiwidCI6ImM5YjcyYjJhLTBiMzQtNDQyNS1iOWM3LWMyNDU5ZWMwMTUxZiJ9)
 
 ---
 
 ## Sobre o Projeto
+A ideia para o projeto surgiu com o lançamento do 2º Concurso de Reúso de Dados Abertos promovido pela Controladoria-Geral da União (CGU).
 Este projeto consiste em um dashboard interativo focado na análise de venda e distribuição de medicamentos sujeitos a controle especial no Brasil no período de 2017 a 2021. A solução visa promover a transparência, o controle social e apoiar a gestão pública de saúde na identificação de padrões de consumo, potenciais vazios assistenciais e gargalos na distribuição.
 
-## Perguntas de Negócio Respondidas
-* **Padrões de Consumo:** Quais princípios ativos de medicamentos controlados apresentam maior volume de vendas? Há mais vendas realizadas de medicamentos na forma industrializada ou manipulada?
+## Principais perguntas de Negócio Respondidas
+* **Padrões de Vendas:** Quais princípios ativos de medicamentos controlados apresentam maior volume de vendas? Há mais vendas realizadas de medicamentos na forma industrializada ou manipulada?
 * **Análise Temporal:** Houve picos atípicos na venda de medicamentos ao longo do período analisado?
-* **Conselhos Prescritores:** O maior volume de prescrição de fármacos controlados é realizado por profissionais registrados em qual conselho?
+* **Análise Geográfica:** Qual estado lidera o volume de vendas de medicamentos controlados no país?
+* **Conselhos Prescritores:** Qual conselho profissional é responsável pelo maior volume de prescrições de fármacos controlados?
+* **CID-10:** Quais são as patologias/diagnósticos (CID-10) mais registrados nas prescrições?
 
 ## Datasets Utilizados
 Os dados utilizados são oriundos do Portal Brasileiro de Dados Abertos (`dados.gov.br`):
