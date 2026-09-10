@@ -1,0 +1,25 @@
+table dim_principio_ativo
+	lineageTag: 4fbeeb29-cf41-4fe7-915d-305285c35ce2
+
+	column nome_principio_ativo
+		dataType: string
+		lineageTag: 89abc09e-40b6-497a-9298-f6a4580e0379
+		summarizeBy: none
+		sourceColumn: nome_principio_ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_principio_ativo = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("187.127.11.180:5434", "concurso_saude_db"),
+				    public_dim_principio_ativo = Fonte{[Schema="public",Item="dim_principio_ativo"]}[Data],
+				    #"Colunas Removidas" = Table.RemoveColumns(public_dim_principio_ativo,{"id"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

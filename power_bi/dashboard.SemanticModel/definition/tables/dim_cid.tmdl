@@ -1,0 +1,68 @@
+table dim_cid
+	lineageTag: e2ee6fc7-c4f6-4f9e-a146-70a783503e39
+
+	column cod_cid
+		dataType: string
+		lineageTag: b175ea55-c7f1-47d1-a7a4-c87610db8b15
+		summarizeBy: none
+		sourceColumn: cod_cid
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: b160794f-b62f-41fd-ae45-795003301d31
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_id
+		dataType: string
+		lineageTag: 7869cf41-60bc-4cc1-b7ff-a7340a592368
+		summarizeBy: none
+		sourceColumn: grupo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column desc_grupo
+		dataType: string
+		lineageTag: ed588395-49f9-456a-aa1c-e26dd7baaf03
+		summarizeBy: none
+		sourceColumn: desc_grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column capitulo_id
+		dataType: string
+		lineageTag: e776d45c-eacb-4b5c-9094-d517378241b4
+		summarizeBy: none
+		sourceColumn: capitulo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column desc_capitulo
+		dataType: string
+		lineageTag: 0627e1e4-1b68-41dd-87c1-d312ed250c00
+		summarizeBy: none
+		sourceColumn: desc_capitulo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_cid = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("187.127.11.180:5434", "concurso_saude_db"),
+				    public_vw_dim_cid = Fonte{[Schema="public",Item="vw_dim_cid"]}[Data],
+				    #"Texto em Maiúscula" = Table.TransformColumns(public_vw_dim_cid,{{"cod_cid", Text.Upper, type text}}),
+				    #"Texto Aparado" = Table.TransformColumns(#"Texto em Maiúscula",{{"cod_cid", Text.Trim, type text}}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Texto Aparado",{{"cod_cid", Text.Clean, type text}}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Texto Limpo", {"cod_cid"})
+				in
+				    #"Duplicatas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
